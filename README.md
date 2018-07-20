@@ -2,6 +2,8 @@
 	“What’s Happening?” is a website where any visitor can either see events or if logged in, can create, read, update, and delete events.  
 This full-stack web application group project, is intended for users to find events happening at or near a location they might be interested to attend.
 
+
+
 ##User Stories
 * A visitor can find events and see who is attending an event.
 * A user can create, update, and delete events.
