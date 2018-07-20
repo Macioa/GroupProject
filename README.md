@@ -52,17 +52,6 @@ A link in your readme.md to the publically-accessible user stories you created
   * Web Sockets
 
 
-
-
-
-
-
-
-
-
-Events App
-==========
-
 Models
 ------
 
@@ -74,6 +63,8 @@ Models
 
 Partial Pages
 -------------
+
+
 
 ### Auth/User
 
@@ -91,7 +82,7 @@ Partial Pages
 
 -   event create (session)
 
-//////////////// 
+ 
 
 Stretch Ideas
 -------------
