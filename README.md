@@ -19,6 +19,9 @@ This full-stack web application group project, is intended for users to find eve
 * HTML5 and EJS
 * CSS
 
+
+
+
 ###Links
 * Approach can be found here
 * Wireframes can be found here
