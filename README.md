@@ -39,7 +39,8 @@ Partial Pages
 
  
 
- 
+Stretch Ideas
+-------------
 
 mail chip
 
