@@ -1,4 +1,8 @@
+const express = require('express');
+router = express.Router();
+const chalk = require('chalk');
 
+console.log(chalk.green('eventController connected'));
 
 router.get('/new', (req, res)=>{
     res.render('events/New.ejs')
@@ -17,3 +21,5 @@ router.get('/:id', (req, res)=>{
         event:event
     })
 })
+
+module.exports=router;

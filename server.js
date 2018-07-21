@@ -19,6 +19,9 @@ const bodyparser = require('body-parser');
 app.use(bodyparser.json()); 
 app.use( bodyparser.urlencoded( {extended: false} ));
 
+const eventController = require('./controllers/eventController');
+app.use('/events', eventController)
+
 app.get('*', (req, res)=>{
     res.render('404.ejs');
     console.error(chalk.red('Invalid path request'))
