@@ -1,7 +1,11 @@
 <-- profile page, needs a user an array of the user's hosted events and an array of the user's attended events -->
 
-<% include ../Nav.ejs %>
+<% include ../nav.ejs %>
 
-<% include ../Partials/Events/List.ejs %>
 
-<% include ../Partials/Events/List.ejs %>
+<% var eventList = hostedEvents %>
+<% include ../partials/events/list.ejs %>
+
+
+<% var eventList = attendedEvents %>
+<% include ../partials/events/list.ejs %>
