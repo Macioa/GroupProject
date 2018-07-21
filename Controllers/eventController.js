@@ -11,7 +11,7 @@ router.get('/new', (req, res)=>{
 router.get('/:id/Edit', (req, res)=>{
     res.render('events/Edit.ejs', {
 //       event: event,
-        user: user
+//        user: user
     })
 })
 

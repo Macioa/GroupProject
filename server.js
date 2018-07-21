@@ -16,8 +16,11 @@ var methodOverride = require('method-override');
 app.use(methodOverride('_method'));
 
 const bodyparser = require('body-parser');
-app.use(bodyparser.json()); 
+app.use( bodyparser.json() ); 
 app.use( bodyparser.urlencoded( {extended: false} ));
+
+const userController = require('./controllers/userController');
+app.use('/user', userController)
 
 const authController = require('./controllers/authController');
 app.use('/auth', authController)
@@ -31,5 +34,6 @@ app.get('*', (req, res)=>{
 })
 
 app.listen(port, ()=>{
+    console.log();
     console.log(chalk.green("What's up? ")+chalk.grey(`Listening on port ${port}`))
 });

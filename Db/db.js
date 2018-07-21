@@ -10,7 +10,7 @@ const connect = (database) => {
 
 mongoose.connection.on('connected', () =>{
     console.log();
-    console.log(chalk.green('Mongoose connected to ')+chalk.grey(`${dbURL}`));
+    console.log(chalk.green('Mongoose connected')+chalk.grey(` to ${dbURL}`));
 });
 
 mongoose.connection.on('error', (err) =>{
@@ -21,7 +21,7 @@ mongoose.connection.on('error', (err) =>{
 
 mongoose.connection.on(`disconnected`, () =>{
     console.log();
-    console.warn(chalk.yellow('Mongoose disconnected from ')+chalk.grey(`${dbURL}`));
+    console.warn(chalk.yellow('Mongoose disconnected')+chalk.grey(` from ${dbURL}`));
 });
 
 module.exports=connect;
