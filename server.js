@@ -1,7 +1,7 @@
-//npm install express nodemon chalk method-override body-parser mongodb mongoose
+//npm install express nodemon chalk method-override body-parser mongodb mongoose ejs
 //node server
 
-const port = 4000
+const port = 3000
 const dbLocation = 'mongodb://localhost/whatsupalpha'
 
 const chalk = require('chalk');
@@ -19,6 +19,10 @@ const bodyparser = require('body-parser');
 app.use(bodyparser.json()); 
 app.use( bodyparser.urlencoded( {extended: false} ));
 
+app.get('*', (req, res)=>{
+    res.render('404.ejs');
+    console.error(chalk.red('Invalid path request'))
+})
 
 app.listen(port, ()=>{
     console.log(chalk.green("What's up? ")+chalk.grey(`Listening on port ${port}`))
