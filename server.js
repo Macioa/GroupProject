@@ -19,6 +19,9 @@ const bodyparser = require('body-parser');
 app.use(bodyparser.json()); 
 app.use( bodyparser.urlencoded( {extended: false} ));
 
+const authController = require('./controllers/authController');
+app.use('/auth', authController)
+
 const eventController = require('./controllers/eventController');
 app.use('/events', eventController)
 
