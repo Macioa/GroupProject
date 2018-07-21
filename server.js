@@ -1,10 +1,15 @@
-const port = 4000
 //npm install express nodemon chalk method-override body-parser mongodb mongoose
+
+const port = 4000
+const dbLocation = 'mongodb://localhost/whatsupalpha'
 
 const chalk = require('chalk');
 
 const express = require('express');
 const app = express();
+
+var mongoose = require('./Db/db')
+mongoose = mongoose(dbLocation);
 
 
 app.listen(port, ()=>{
