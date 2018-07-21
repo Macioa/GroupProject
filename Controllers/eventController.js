@@ -5,11 +5,19 @@ const chalk = require('chalk');
 //console.log(chalk.green('eventController connected'));
 
 router.get('/new', (req, res)=>{
-    res.render('events/new.ejs')
+    res.render('events/new.ejs',{
+//        user:user
+    })
+})
+
+router.post('/', (req, res)=>{
+    // create new event
 })
 
 router.get('/', (req, res)=>{
-    res.render('home.ejs')
+    res.render('home.ejs',{
+//        eventList: events
+    })
 })
 
 router.get('/:id', (req, res)=>{
@@ -26,6 +34,12 @@ router.get('/:id/edit', (req, res)=>{
     })
 })
 
+router.put('/:id/edit', (req, res)=>{
 
+})
+
+router.delete('/:id', (req, res)=>{
+
+})
 
 module.exports=router;

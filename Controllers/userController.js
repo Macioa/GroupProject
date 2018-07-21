@@ -13,4 +13,16 @@ router.get('/:id/profile', (req, res)=>{
     })
 })
 
+router.get('/:id/edit', (req,res)=>{
+    res.render('/partials/auth/edit.ejs', {
+        //user:user
+    })
+})
+
+router.put('/:id', (req, res)=>{
+// edit user account
+})
+
+
+
 module.exports=router;
