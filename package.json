@@ -16,5 +16,14 @@
   "bugs": {
     "url": "https://github.com/Macioa/GroupProject/issues"
   },
-  "homepage": "https://github.com/Macioa/GroupProject#readme"
+  "homepage": "https://github.com/Macioa/GroupProject#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "chalk": "^2.4.1",
+    "express": "^4.16.3",
+    "method-override": "^3.0.0",
+    "mongodb": "^3.1.1",
+    "mongoose": "^5.2.4",
+    "nodemon": "^1.18.3"
+  }
 }
