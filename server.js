@@ -1,4 +1,5 @@
 //npm install express nodemon chalk method-override body-parser mongodb mongoose
+//node server
 
 const port = 4000
 const dbLocation = 'mongodb://localhost/whatsupalpha'
@@ -10,6 +11,13 @@ const app = express();
 
 var mongoose = require('./Db/db')
 mongoose = mongoose(dbLocation);
+
+var methodOverride = require('method-override');
+app.use(methodOverride('_method'));
+
+const bodyparser = require('body-parser');
+app.use(bodyparser.json()); 
+app.use( bodyparser.urlencoded( {extended: false} ));
 
 
 app.listen(port, ()=>{
