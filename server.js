@@ -1,4 +1,4 @@
-//npm install express nodemon chalk method-override body-parser mongodb mongoose ejs
+//npm install express nodemon chalk method-override body-parser mongodb mongoose ejs helmet heroku foreman
 //node server
 var config = require('./config');
 
@@ -18,6 +18,9 @@ app.use(methodOverride('_method'));
 const bodyparser = require('body-parser');
 app.use( bodyparser.json() ); 
 app.use( bodyparser.urlencoded( {extended: false} ));
+
+const helmet = require('helmet')
+app.use( helmet() );
 
 //         Controllers
 
