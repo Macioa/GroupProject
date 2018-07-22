@@ -1,8 +1,6 @@
-//npm install express nodemon chalk method-override body-parser mongodb mongoose ejs
+//npm install express nodemon chalk method-override body-parser mongodb mongoose ejs helmet heroku foreman
 //node server
-
-const port = 3000
-const dbLocation = 'mongodb://localhost/whatsupalpha'
+var config = require('./config');
 
 const chalk = require('chalk');
 
@@ -10,7 +8,7 @@ const express = require('express');
 const app = express();
 
 var mongoose = require('./Db/db')
-mongoose = mongoose(dbLocation);
+mongoose = mongoose(`mongodb+srv://${config.dbUser}:${config.dbPass}@cluster0-s0zvo.gcp.mongodb.net/test?retryWrites=true`);
 
 //         Middleware
 
@@ -21,16 +19,19 @@ const bodyparser = require('body-parser');
 app.use( bodyparser.json() ); 
 app.use( bodyparser.urlencoded( {extended: false} ));
 
+const helmet = require('helmet')
+app.use( helmet() );
+
 //         Controllers
 
-const userController = require('./controllers/userController');
-app.use('/user', userController)
+//const userController = require('./controllers/userController');
+//app.use('/user', userController)
 
-const authController = require('./controllers/authController');
-app.use('/auth', authController)
+//const authController = require('./controllers/authController');
+//app.use('/auth', authController)
 
-const eventController = require('./controllers/eventController');
-app.use('/events', eventController)
+//const eventController = require('./controllers/eventController');
+//app.use('/events', eventController)
 
 //         Default pages
 
@@ -43,14 +44,13 @@ app.get('/login', (req, res)=>{
 })
 
 app.get('*', (req, res)=>{
-    res.render('404.ejs');
+    res.render('./404.ejs');
     console.error(chalk.red('Invalid path request: ')+chalk.grey(req.originalUrl))
 })
 
 
 
-
-
+var port = process.env.PORT||config.port;
 app.listen(port, ()=>{
     console.log();
     console.log(chalk.green("What's up? ")+chalk.grey(`Listening on port ${port}`))
