@@ -1,8 +1,6 @@
 //npm install express nodemon chalk method-override body-parser mongodb mongoose ejs
 //node server
-
-const port = 3000
-const dbLocation = 'mongodb://localhost/whatsupalpha'
+var config = require('./config');
 
 const chalk = require('chalk');
 
@@ -10,7 +8,7 @@ const express = require('express');
 const app = express();
 
 var mongoose = require('./Db/db')
-mongoose = mongoose(dbLocation);
+mongoose = mongoose(`mongodb+srv://${config.dbUser}:${config.dbPass}@cluster0-s0zvo.gcp.mongodb.net/test?retryWrites=true`);
 
 //         Middleware
 
@@ -47,10 +45,10 @@ app.get('*', (req, res)=>{
     console.error(chalk.red('Invalid path request: ')+chalk.grey(req.originalUrl))
 })
 
+//process.env.test = "testing"
 
 
-
-
+var port = config.port||port;
 app.listen(port, ()=>{
     console.log();
     console.log(chalk.green("What's up? ")+chalk.grey(`Listening on port ${port}`))
