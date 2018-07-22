@@ -7,4 +7,5 @@ defaultConfig = {
     dbPass: "password",
 }
 
+
 module.exports = defaultConfig

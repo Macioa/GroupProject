@@ -45,10 +45,9 @@ app.get('*', (req, res)=>{
     console.error(chalk.red('Invalid path request: ')+chalk.grey(req.originalUrl))
 })
 
-//process.env.test = "testing"
 
 
-var port = config.port||port;
+var port = process.env.PORT||config.port;
 app.listen(port, ()=>{
     console.log();
     console.log(chalk.green("What's up? ")+chalk.grey(`Listening on port ${port}`))
