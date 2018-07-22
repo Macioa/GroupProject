@@ -1,4 +1,4 @@
-defalutConfig = {
+defaultConfig = {
     port: 3000,
 
 
@@ -7,4 +7,4 @@ defalutConfig = {
     dbPass: "password",
 }
 
-module.exports = defalutConfig
+module.exports = defaultConfig
