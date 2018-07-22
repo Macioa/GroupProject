@@ -7,5 +7,7 @@ defaultConfig = {
     dbPass: "password",
 }
 
+defaultConfig.dbUser = process.env.dbUser || defaultConfig.dbUser;
+defaultConfig.dbPass = process.env.dbPass || defaultConfig.dbPass;
 
 module.exports = defaultConfig
