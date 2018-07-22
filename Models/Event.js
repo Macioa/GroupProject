@@ -9,7 +9,7 @@ const eventSchema = mongoose.Schema({
   location: [Location.schema],
   type: {type: String, required: true},
   about:{type: String, required: true},
-  usersAttending: String,
+  usersAttending: Number,
 });
 
 const Event = mongoose.model('Event', eventSchema);
