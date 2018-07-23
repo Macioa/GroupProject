@@ -1,5 +1,3 @@
-I am really tired of Github. I am getting there though. 
-
 # What’s Happening?
 	“What’s Happening?” is a website where any visitor can either see events or if logged in, can create, read, update, and delete events.  
 This full-stack web application group project, is intended for users to find events happening at or near a location they might be interested to attend.
