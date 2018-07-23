@@ -6,8 +6,17 @@ const bcrypt = require('bcrypt');
 console.log(chalk.green('authController connected'));
 
 
+
+//GET LOGIN & REGISTER PAGE
+router.get('/login', (req, res) => {
+  res.render('login.ejs', {
+    message: req.session.message
+  });
+})
+
+
 //LOGIN FORM
-router.post('/auth/login', (req, res) => {
+router.post('/login', (req, res) => {
   User.findOne({username: reg.body.username}, (err, user) => {
     if (user) {
       if (bcrypt.compareSync(req.body.password, user.password)) {
@@ -28,7 +37,7 @@ router.post('/auth/login', (req, res) => {
 
 
 //REGISTER FORM
-router.post('/auth/login', (req, res, next) => {
+router.post('/login', (req, res, next) => {
 
       // hash the pw
       const password = req.body.password;
@@ -52,16 +61,7 @@ router.post('/auth/login', (req, res, next) => {
       });
 
 
-          //GET LOGIN & REGISTER PAGE
-          router.get('/auth/login', (req, res) => {
-            res.render('/LogIn.ejs', {
-              message: req.session.message
-            });
-          })
+
 
 
       module.exports = router;
-
-
-
-  
