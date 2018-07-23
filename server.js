@@ -27,11 +27,11 @@ app.use( helmet() );
 const userController = require('./controllers/userController');
 app.use('/user', userController)
 
-//const authController = require('./controllers/authController');
-//app.use('/auth', authController)
+const authController = require('./controllers/authController');
+app.use('/auth', authController)
 
-//const eventController = require('./controllers/eventController');
-//app.use('/events', eventController)
+const eventController = require('./controllers/eventController');
+app.use('/events', eventController)
 
 //         Default pages
 
