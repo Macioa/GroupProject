@@ -17,7 +17,7 @@ organization: String,
 });
 
 
-//QUESTION 1: should we put {attenindEvent: Boolean, required: true}, in the Event Schema? Also should we put {createdEvent: Boolean, required: true} in the Event Schema?
+//QUESTION 1: should we put {attendingEvent: Boolean, required: true}, in the Event Schema? Also should we put {createdEvent: Boolean, required: true} in the Event Schema?
 
 
 

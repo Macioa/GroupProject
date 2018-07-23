@@ -4,7 +4,13 @@ I am tired of Github.
 	“What’s Happening?” is a website where any visitor can either see events or if logged in, can create, read, update, and delete events.  
 This full-stack web application group project, is intended for users to find events happening at or near a location they might be interested to attend.
 
+<<<<<<< HEAD
 ## User Stories
+=======
+
+
+##User Stories
+>>>>>>> upstream/master
 * A visitor can find events and see who is attending an event.
 * A user can create, update, and delete events.
 * A visitor or user can see where events are.
@@ -19,6 +25,7 @@ This full-stack web application group project, is intended for users to find eve
 * HTML5 and EJS
 * CSS
 
+<<<<<<< HEAD
 ### Links
 * Approach can be found here:
 * Wireframes can be found here:
@@ -30,6 +37,14 @@ https://wireframe.cc/Bw7h4t
 https://wireframe.cc/6X23mW
 
 * Trello link can be found here: https://trello.com/b/MoEI07U6/whats-happening-full-stack-group-project
+=======
+
+
+###Links
+* Approach can be found here
+* Wireframes can be found here
+* Trello link can be found here
+>>>>>>> upstream/master
 
 
 ### MVP
@@ -55,3 +70,23 @@ A link in your readme.md to the publically-accessible user stories you created
   * Past events
   * Multi-city option
   * Web Sockets
+<<<<<<< HEAD
+=======
+
+ 
+
+Stretch Ideas
+-------------
+
+passport
+
+mail chip
+
+google maps API
+
+sockets
+
+tags
+
+filter index by location
+>>>>>>> upstream/master
