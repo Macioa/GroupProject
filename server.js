@@ -1,4 +1,4 @@
-//npm install express nodemon chalk method-override body-parser mongodb mongoose ejs helmet heroku foreman
+//npm install express nodemon chalk method-override body-parser mongodb mongoose ejs helmet heroku foreman express-session bcrypt
 //node server
 var config = require('./config');
 
