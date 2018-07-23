@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const chalk = require('chalk');
 //const User = require('../Models/user');
-//const Event = require('../Models/Event');
+const Event = require('../models/event');
 //const Location = require('../Models/Location');
 
 
