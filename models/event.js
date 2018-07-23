@@ -6,7 +6,7 @@ const eventSchema = mongoose.Schema({
   name: {type: String, required: true},
   date: {type: Date, required: true},
   time: {type: String, required: true},
-  location: [Location.schema],
+  location:{type: String, required: true},
   type: {type: String, required: true},
   about:{type: String, required: true},
   usersAttending: String,
@@ -15,4 +15,3 @@ const eventSchema = mongoose.Schema({
 const Event = mongoose.model('Event', eventSchema);
 
 module.exports = Event;
-
