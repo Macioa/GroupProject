@@ -84,7 +84,6 @@ router.delete('/:id', async (req, res) => {
     console.log('hits the delete in index')
     const deletedEvent = await Event.findByIdAndRemove(req.params.id);
     res.redirect('/events')
-
   } catch (err) {
     console.log(err, ' not deleting');
     res.send(err, ' not deleting');
