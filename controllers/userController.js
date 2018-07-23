@@ -1,28 +1,54 @@
 const express = require('express');
-router = express.Router();
+const router = express.Router();
 const chalk = require('chalk');
 
-//console.log(chalk.green('userController connected'));
+console.log(chalk.green('userController connected'));
 
 
-router.get('/:id/profile', (req, res)=>{
-    res.render('./users/show.ejs', {
- //   user:user,
- //   hostedEvents:hostedEvents,
- //   attendedEvents:attendedEvents
-    })
-})
+//GET THE USER'S PROFILE PAGE.
+  router.get('/:id/profile', (req, res) => {
+      User.findById(req.params.id, (err, foundUser) => {
+          //it was show.ejs but that didn't match the ejs name
+          res.render('./users/profile.ejs', {
+              user: foundUser, //foundUser is what findById is referring to.
+              hostedEvents: user.hostedEvents,
+              attendedEvents: user.attendedEvents
+            })
+          })
+      })
 
-router.get('/:id/edit', (req,res)=>{
-    res.render('./partials/auth/edit.ejs', {
-        //user:user
-    })
-})
+    //GET THE USER'S EDIT PAGE.
+    router.get('/:id/edit', (req, res) => {
+      User.findById(req.params.id, (err, foundUser) => {
+        res.render('./partials/auth/edit.ejs', {
+          user: foundUser
+        });
+      });
+    });
 
-router.put('/:id', (req, res)=>{
-// edit user account
-})
+    //UPDATE THE USER'S EDIT PAGE.
+    router.put('/:id', (req, res) => {
+      User.findByIdAndUpdate(req.params.id, req.body, {
+        new: true
+      }, (err, updatedUser) => {
+        console.log(updatedUser, ' this is the updatedUser');
+        res.redirect('/:id/profile')
+      });
+    });
+
+
+    //DELETE USER
+    // router.delete('/:id', (req, res) => {
+    //       User.findByIdAndRemove(req.params.id, (err, deletedAuthor) => {
+    //         User.remove({
+    //           _id
+    //         })
+    //         res.redirect('/')
+    //       })
 
 
 
-module.exports=router;
+
+
+
+    module.exports = router;
