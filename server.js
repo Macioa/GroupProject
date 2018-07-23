@@ -7,7 +7,7 @@ const chalk = require('chalk');
 const express = require('express');
 const app = express();
 
-var mongoose = require('./Db/db')
+var mongoose = require('./db/db')
 mongoose = mongoose(`mongodb+srv://${config.dbUser}:${config.dbPass}@cluster0-s0zvo.gcp.mongodb.net/test?retryWrites=true`);
 
 //         Middleware
@@ -24,14 +24,14 @@ app.use( helmet() );
 
 //         Controllers
 
-//const userController = require('./controllers/userController');
-//app.use('/user', userController)
+const userController = require('./controllers/userController');
+app.use('/user', userController)
 
-//const authController = require('./controllers/authController');
-//app.use('/auth', authController)
+const authController = require('./controllers/authController');
+app.use('/auth', authController)
 
-//const eventController = require('./controllers/eventController');
-//app.use('/events', eventController)
+const eventController = require('./controllers/eventController');
+app.use('/events', eventController)
 
 //         Default pages
 
@@ -47,7 +47,6 @@ app.get('*', (req, res)=>{
     res.render('./404.ejs');
     console.error(chalk.red('Invalid path request: ')+chalk.grey(req.originalUrl))
 })
-
 
 
 var port = process.env.PORT||config.port;
