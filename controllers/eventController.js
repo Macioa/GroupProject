@@ -1,9 +1,10 @@
 const express = require('express');
 const router = express.Router();
 const chalk = require('chalk');
-const Event = require('../Models/Event');
-const Location = require('../Models/Location');
-const User = require('../Models/user');
+//const User = require('../Models/user');
+//const Event = require('../Models/Event');
+//const Location = require('../Models/Location');
+
 
 
 // INDEX
@@ -72,7 +73,6 @@ router.post('/', async (req, res) => {
   try {
     console.log(' hits the post route');
     const newEvent = await Event.create(req.body);
-
     res.redirect('/events');
   } catch (err) {
     res.send(err, ' not creating a post');
@@ -90,3 +90,6 @@ router.delete('/:id', async (req, res) => {
     res.send(err, ' not deleting');
   }
 });
+
+
+module.exports = router;

@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
-const Location = require('./location');
-const User = require('./user');
+//const Location = require('./location');
+//const User = require('./user');
 
 const eventSchema = mongoose.Schema({
   name: {type: String, required: true},
