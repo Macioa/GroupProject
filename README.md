@@ -1,4 +1,4 @@
-I am tired of Github.
+I am really tired of Github. I am getting there though. 
 
 # What’s Happening?
 	“What’s Happening?” is a website where any visitor can either see events or if logged in, can create, read, update, and delete events.  
