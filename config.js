@@ -2,9 +2,9 @@ defaultConfig = {
     port: 3000,
 
 
-    
-    dbUser: "user",
-    dbPass: "password",
+
+    dbUser: "Daniel",
+    dbPass: "l5Eec9",
 }
 
 defaultConfig.dbUser = process.env.dbUser || defaultConfig.dbUser;
