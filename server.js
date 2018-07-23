@@ -24,7 +24,7 @@ app.use( helmet() );
 
 //         Controllers
 
-//const userController = require('./controllers/userController');
+const userController = require('./controllers/userController');
 //app.use('/user', userController)
 
 //const authController = require('./controllers/authController');
@@ -45,7 +45,7 @@ app.get('/login', (req, res)=>{
 })
 
 app.get('*', (req, res)=>{
-    res.render('./home.ejs');
+    res.render('./404.ejs');
     console.error(chalk.red('Invalid path request: ')+chalk.grey(req.originalUrl))
 })
 
