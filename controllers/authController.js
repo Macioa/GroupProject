@@ -7,7 +7,7 @@ const User = require('../models/user')
 
 //login and register page
 router.get('/login', (req, res)=>{
-    res.render('login.ejs')
+    res.render('./login.ejs')
 })
 
 //create a new user
