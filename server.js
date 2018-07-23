@@ -45,7 +45,7 @@ app.get('/login', (req, res)=>{
 })
 
 app.get('*', (req, res)=>{
-    res.render('./home.ejs');
+    res.render('../Views/home.ejs');
     console.error(chalk.red('Invalid path request: ')+chalk.grey(req.originalUrl))
 })
 
