@@ -39,7 +39,6 @@ app.get(['/home','/'], (req, res)=>{
     res.redirect('/events');
 })
 
-
 app.get('/login', (req, res)=>{
     res.redirect('/auth/login');
 })
