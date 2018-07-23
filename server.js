@@ -16,7 +16,7 @@ var methodOverride = require('method-override');
 app.use(methodOverride('_method'));
 
 const bodyparser = require('body-parser');
-app.use( bodyparser.json() ); 
+app.use( bodyparser.json() );
 app.use( bodyparser.urlencoded( {extended: false} ));
 
 const helmet = require('helmet')
@@ -42,6 +42,10 @@ app.get(['/home','/'], (req, res)=>{
 app.get('/login', (req, res)=>{
     res.redirect('/auth/login');
 })
+
+app.get('/about', (req, res)=>{
+    res.render('users/about.ejs')
+})    
 
 app.get('*', (req, res)=>{
     res.render('./404.ejs');
