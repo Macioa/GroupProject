@@ -17,7 +17,6 @@ console.log(chalk.green('userController connected'));
           })
       })
 
-
     //GET THE USER'S EDIT PAGE.
     router.get('/:id/edit', (req, res) => {
       User.findById(req.params.id, (err, foundUser) => {
