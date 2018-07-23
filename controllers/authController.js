@@ -51,13 +51,17 @@ router.post('/auth/login', (req, res, next) => {
       })
       });
 
+
+          //GET LOGIN & REGISTER PAGE
+          router.get('/auth/login', (req, res) => {
+            res.render('/LogIn.ejs', {
+              message: req.session.message
+            });
+          })
+
+
       module.exports = router;
 
 
 
-      //GET LOGIN & REGISTER PAGE
-      router.get('/auth/login', (req, res) => {
-        res.render('/LogIn.ejs', {
-          message: req.session.message
-        });
-      })
+  
