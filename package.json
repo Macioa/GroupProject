@@ -18,10 +18,12 @@
   },
   "homepage": "https://github.com/Macioa/GroupProject#readme",
   "dependencies": {
+    "bcrypt": "^3.0.0",
     "body-parser": "^1.18.3",
     "chalk": "^2.4.1",
     "ejs": "^2.6.1",
     "express": "^4.16.3",
+    "express-session": "^1.15.6",
     "foreman": "^3.0.1",
     "helmet": "^3.13.0",
     "heroku": "^7.7.4",
