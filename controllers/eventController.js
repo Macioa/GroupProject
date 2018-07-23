@@ -72,7 +72,6 @@ router.post('/', async (req, res) => {
   try {
     console.log(' hits the post route');
     const newEvent = await Event.create(req.body);
-
     res.redirect('/events');
   } catch (err) {
     res.send(err, ' not creating a post');
@@ -84,11 +83,10 @@ router.delete('/:id', async (req, res) => {
   try {
     console.log('hits the delete in index')
     const deletedEvent = await Event.findByIdAndRemove(req.params.id);
-  }
-  res.redirect('/events')
+    res.redirect('/events')
 
-} catch (err) {
-  console.log(err, ' not deleting');
-  res.send(err, ' not deleting');
-}
+  } catch (err) {
+    console.log(err, ' not deleting');
+    res.send(err, ' not deleting');
+  }
 });
