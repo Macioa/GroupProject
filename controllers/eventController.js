@@ -5,6 +5,7 @@ const chalk = require('chalk');
 //console.log(chalk.green('eventController connected'));
 
 router.get('/new', (req, res)=>{
+    console.log(req.originalUrl)
     res.render('./events/new.ejs',{
 //        user:user
     })
