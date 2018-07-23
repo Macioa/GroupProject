@@ -2,6 +2,8 @@ const express = require('express');
 const router = express.Router();
 const chalk = require('chalk');
 
+const User = require('../models/user')
+
 console.log(chalk.green('userController connected'));
 
 
