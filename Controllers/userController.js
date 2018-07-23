@@ -6,7 +6,7 @@ const chalk = require('chalk');
 
 
 router.get('/:id/profile', (req, res)=>{
-    res.render('users/show.ejs', {
+    res.render('./users/show.ejs', {
  //   user:user,
  //   hostedEvents:hostedEvents,
  //   attendedEvents:attendedEvents
@@ -14,7 +14,7 @@ router.get('/:id/profile', (req, res)=>{
 })
 
 router.get('/:id/edit', (req,res)=>{
-    res.render('/partials/auth/edit.ejs', {
+    res.render('./partials/auth/edit.ejs', {
         //user:user
     })
 })
