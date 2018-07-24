@@ -57,13 +57,15 @@ router.post('/register', async (req, res, next) => {
         if (err)
           console.error(err)
         else console.log(user)
+        res.redirect(`/user/${user._id}/profile`);
        })  
       console.log(chalk.yellow(user))
 
       // session set up
      // req.session.username = user.username;
      // req.session.loggedIn = true;
-      res.redirect('/auth/login')
+     
+
     });
 
 
