@@ -1,5 +1,11 @@
-<section>
-
-<-- Edit Events form goes here, needs form and user
-
-<section>
+  <section>
+  <form action="/events/<%=event._id%>?_method=PUT" method="post">
+          <input type="text" name="Name" value="<%=event.name%>"/><br/>
+          <input type="date" name="Date" value="<%=event.date%>"  /><br/>
+          <input type='text' name="Time" value="<%=event.time%>"/><br/>
+          <input type='text' name="Location" value="<%=event.location%>"/><br/>
+          <input type='text' name="Type" value="'<%=event.type%>'"/><br/>
+          <input type='text' name="About" value="<%=event.about%>"/><br/>
+          <input type="submit" value="Update Event"/>
+        </form>
+  </section>
