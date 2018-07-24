@@ -17,12 +17,13 @@ router.get('/login', (req, res) => {
 
 //LOGIN FORM
 router.post('/login', (req, res) => {
-  User.findOne({username: reg.body.username}, (err, user) => {
+  User.findOne({username: req.body.username}, (err, user) => {
     if (user) {
+      console.log(chalk.green(user));
       if (bcrypt.compareSync(req.body.password, user.password)) {
         req.session.username = user.username;
         req.session.loggedIn = true;
-        res.redirect('/articles')
+        res.redirect('/events')
       } else {
         req.session.message = 'password is incorrect';
         res.redirect('/login')
@@ -37,8 +38,8 @@ router.post('/login', (req, res) => {
 
 
 //REGISTER FORM
-router.post('/login', (req, res, next) => {
-
+router.post('/register', async (req, res, next) => {
+    console.log(chalk.green('route hit'))
       // hash the pw
       const password = req.body.password;
       const passwordHash = bcrypt.hashSync(password, bcrypt.genSaltSync(10));
@@ -49,16 +50,21 @@ router.post('/login', (req, res, next) => {
       userDbEntry.password = passwordHash;
       console.log(passwordHash);
 
+      console.log(chalk.green('asdf'))
       // password into databse
-      User.create(userDbEntry, (err, user) => {
-        console.log(user)
+      console.log(userDbEntry)
+      let user = await User.create(userDbEntry, (err, user) => { 
+        if (err)
+          console.error(err)
+        else console.log(user)
+       })  
+      console.log(chalk.yellow(user))
 
-        // session set up
-        req.session.username = user.username;
-        req.session.loggedIn = true;
-        res.redirect('/login')
-      })
-      });
+      // session set up
+     // req.session.username = user.username;
+     // req.session.loggedIn = true;
+      res.redirect('/auth/login')
+    });
 
 
 

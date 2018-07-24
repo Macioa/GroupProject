@@ -11,9 +11,10 @@ router.post('/', async (req, res) => {
   try {
     console.log(' hits the post route');
     const newEvent = await Event.create(req.body);
-    res.redirect('/');
-  } catch (err) {
-    res.send(err, ' not creating a post');
+      res.redirect('/events');
+      } catch (err) {
+        console.log(req.body);
+        res.send(err, ' not creating a post');
   }
 });
 
@@ -41,7 +42,7 @@ router.get('/:id', async (req, res, next) => {
   try {
     console.log('hits the show page');
     const foundEvent = await Event.findById(req.params.id);
-    res.render('events/Show.ejs', {
+    res.render('events/show.ejs', {
       event: foundEvent,
     });
   } catch (err) {
