@@ -2,7 +2,30 @@
      <h3>Login</h3>
      <form action = "/auth/login" method="POST">
        Username: <input type="text" name="username" placeholder="username"><br>
-       Password: <input type="password" name="password" placeholder="password"><br>
-       <button type="submit">Login</button>
+       Password: <input id="hideRegister" type="password" name="password" placeholder="password">
+
+         <input type="checkbox" onclick="Toggle()">
+        Show Password<br>
+        <button type="submit">Login</button>
+
+
+
+
+
+
+       <script>
+         // Change the type of input to password or text
+             function Toggle() {
+                 var temp = document.getElementById("hideRegister");
+                 if (temp.type === "password") {
+                     temp.type = "text";
+                 }
+                 else {
+                     temp.type = "password";
+                 }
+             }
+     </script>
+
+
      </form>
    </section>
