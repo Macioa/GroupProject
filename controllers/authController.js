@@ -23,15 +23,18 @@ router.post('/login', (req, res) => {
       if (bcrypt.compareSync(req.body.password, user.password)) {
         req.session.username = user.username;
         req.session.loggedIn = true;
-        res.redirect('/events')
+        res.redirect(`/user/${user._id}/profile`);
+        console.log(user)
       } else {
         req.session.message = 'password is incorrect';
-        res.redirect('/login')
+        res.redirect('/auth/login')
+        console.log(user)
       }
     } else {
       console.log('no username found');
       req.session.message = 'Username is incorrect;'
-      res.redirect('/login')
+      res.redirect('/auth/login')
+      console.log(user)
     }
   })
 })
@@ -49,27 +52,22 @@ router.post('/register', async (req, res, next) => {
       userDbEntry.username = req.body.username;
       userDbEntry.password = passwordHash;
       console.log(passwordHash);
-
       console.log(chalk.green('asdf'))
       // password into databse
       console.log(userDbEntry)
-      let user = await User.create(userDbEntry, (err, user) => { 
-        if (err)
+      let user = await User.create(userDbEntry, (err, user) => {
+        if (err) {
           console.error(err)
-        else console.log(user)
+}
+        else  {
+          console.log(chalk.blue(user))
+          // session set up
+          req.session.username = user.username;
+          req.session.loggedIn = true;
         res.redirect(`/user/${user._id}/profile`);
-       })  
-      console.log(chalk.yellow(user))
-
-      // session set up
-     // req.session.username = user.username;
-     // req.session.loggedIn = true;
-     
-
+      }
+       })
     });
-
-
-
 
 
       module.exports = router;
