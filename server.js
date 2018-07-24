@@ -8,6 +8,7 @@ const express = require('express');
 const app = express();
 const session = require('express-session');
 
+
 var mongoose = require('./db/db')
 mongoose = mongoose(`mongodb+srv://${config.dbUser}:${config.dbPass}@cluster0-s0zvo.gcp.mongodb.net/test?retryWrites=true`);
 
@@ -29,8 +30,8 @@ app.use( helmet() );
 
 app.use(session({
   secret: 'this is a random secret string that you make up',
-  resave: false, 
-  saveUninitialized: false 
+  resave: false,
+  saveUninitialized: false
 }))
 
 
