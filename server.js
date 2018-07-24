@@ -47,11 +47,13 @@ app.use('/events', eventController)
 
 //         Default pages
 
-app.get(['/home','/'], (req, res)=>{
+app.get(['/home','/'], (req, res, next)=>{
+    next();
     res.redirect('/events');
 })
 
-app.get('/login', (req, res)=>{
+app.get('/login', (req, res, next)=>{
+    next();
     res.redirect('/auth/login');
 })
 

@@ -19,24 +19,24 @@ console.log(chalk.green('userController connected'));
           })
       })
 
-    //GET THE USER'S EDIT PAGE.
-    router.get('/:id/edit', (req, res) => {
-      User.findById(req.params.id, (err, foundUser) => {
-        res.render('./partials/auth/edit.ejs', {
-          user: foundUser
-        });
+  //GET THE USER'S EDIT PAGE.
+  router.get('/:id/edit', (req, res) => {
+    User.findById(req.params.id, (err, foundUser) => {
+      res.render('./partials/auth/edit.ejs', {
+        user: foundUser
       });
     });
+  });
 
-    //UPDATE THE USER'S EDIT PAGE.
-    router.put('/:id', (req, res) => {
-      User.findByIdAndUpdate(req.params.id, req.body, {
-        new: true
-      }, (err, updatedUser) => {
-        console.log(updatedUser, ' this is the updatedUser');
-        res.redirect('/:id/profile')
-      });
+  //UPDATE THE USER'S EDIT PAGE.
+  router.put('/:id', (req, res) => {
+    User.findByIdAndUpdate(req.params.id, req.body, {
+      new: true
+    }, (err, updatedUser) => {
+      console.log(updatedUser, ' this is the updatedUser');
+      res.redirect('/:id/profile')
     });
+  });
 
 
     //DELETE USER
