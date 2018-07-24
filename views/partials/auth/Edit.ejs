@@ -1,24 +1,24 @@
 <section>
 
-<form action="/:id/profile method="put" method="post">
+<form action="/:id/profile" method="put" method="post">
 
 
-
-<input type="text" name="username" value="<%=user.username%>">/><br>
-
-<input type="text" name="password" value="<%=user.password%>">/><br>
-
-<input type="email" name="emailAddress" value="<%=user.emailAddress%>">/><br>
-
-<input type="text" name="firstName" value="<%=user.firstName%>">/><br>
-
-<input type="text" name="lastName" value="<%=user.lastName%>">/><br>
-
-<input type="url" name="image" value="<%=user.image%>">/><br>
-
+Username:<br>
+<input type="text" name="username" value="<%=user.username%>"><br>
+Password:<br>
+<input type="text" name="password" value="<%=user.password%>"><br>
+Email:<br>
+<input type="email" name="emailAddress" value="<%=user.emailAddress%>"><br>
+First Name:<br>
+<input type="text" name="firstName" value="<%=user.firstName%>"><br>
+Last Name:<br>
+<input type="text" name="lastName" value="<%=user.lastName%>"><br>
+Img URL:<br>
+<input type="url" name="image" value="<%=user.image%>"><br>
+Organization:<br>
 <input type="organization" name="orginazation" value="<%=user.orginzation%>"/><br>
-
-<input type="submit" value="Update User"/>
+<br>
+<input type="submit" value="Update">
 
 </form>
 

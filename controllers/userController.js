@@ -6,7 +6,7 @@ const User = require('../models/user')
 
 console.log(chalk.green('userController connected'));
 
-router.get('/',(req, res)=>{res.send('user!')})
+//router.get('/',(req, res)=>{res.send('user!')})
 
 //GET THE USER'S PROFILE PAGE.
 router.get('/:id/profile', (req, res) => {
@@ -22,33 +22,33 @@ router.get('/:id/profile', (req, res) => {
     })
 
   //GET THE USER'S EDIT PAGE.
-  router.get('/:id/edit', (req, res) => {
-    User.findById(req.params.id, (err, foundUser) => {
-      res.render('./partials/auth/edit.ejs', {
-        user: foundUser
-      });
+router.get('/:id/edit', (req, res) => {
+  User.findById(req.params.id, (err, foundUser) => {
+    res.render('./partials/auth/edit.ejs', {
+      user: foundUser
     });
   });
+});
 
   //UPDATE THE USER'S EDIT PAGE.
-  router.put('/:id', (req, res) => {
-    User.findByIdAndUpdate(req.params.id, req.body, {
-      new: true
-    }, (err, updatedUser) => {
-      console.log(updatedUser, ' this is the updatedUser');
-      res.redirect('/:id/profile')
-    });
+router.put('/:id', (req, res) => {
+  User.findByIdAndUpdate(req.params.id, req.body, {
+    new: true
+  }, (err, updatedUser) => {
+    console.log(`Updated user: ${updatedUser}`);
+    res.redirect('/:id/profile')
   });
+});
 
 
-    // DELETE USER
-    // router.delete('/:id', (req, res) => {
-    //       User.findByIdAndRemove(req.params.id, (err, deletedAuthor) => {
-    //         User.remove({
-    //           _id
-    //         })
-    //         res.redirect('/')
-    //       })
+// DELETE USER
+// router.delete('/:id', (req, res) => {
+//       User.findByIdAndRemove(req.params.id, (err, deletedAuthor) => {
+//         User.remove({
+//           _id
+//         })
+//         res.redirect('/')
+//       })
 
 
 
