@@ -23,17 +23,17 @@ router.post('/login', (req, res) => {
       if (bcrypt.compareSync(req.body.password, user.password)) {
         req.session.username = user.username;
         req.session.loggedIn = true;
-        res.redirect('/events')
+        res.redirect(`/user/${user._id}/profile`);
         console.log(user)
       } else {
         req.session.message = 'password is incorrect';
-        res.redirect('/login')
+        res.redirect('/auth/login')
         console.log(user)
       }
     } else {
       console.log('no username found');
       req.session.message = 'Username is incorrect;'
-      res.redirect('/login')
+      res.redirect('/auth/login')
       console.log(user)
     }
   })
