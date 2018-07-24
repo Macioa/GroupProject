@@ -48,16 +48,16 @@ A link in your readme.md to the publically-accessible user stories you created
 | get  | /login |
 | post | /login (login) |
 | post | /login (register) |
-| get  | '/:id/profile' (get the user's profile page) |
-| get  | '/:id/edit' (get the user's edit page) |
-| put  | '/:id' (update user's edit page) |
+| get  | /:id/profile (get the user's profile page) |
+| get  | /:id/edit (get the user's edit page) |
+| put  | /:id (update user's edit page) |
 | get  | / (get the home page) |
 | get  | events/new (get new events) |
-| get  | '/:id' (get the event id) |
-| get  | '/:id/edit' (edit event) |
-| put  | '/:id' (update event) |
-| post | '/' (create event) |
-| get  | '/:id' (delete event) |
+| get  | /:id (get the event id) |
+| get  | /:id/edit (edit event) |
+| put  | /:id (update event) |
+| post | / (create event) |
+| get  | /:id (delete event) |
 
 
 
@@ -65,11 +65,11 @@ A link in your readme.md to the publically-accessible user stories you created
   * Google Maps API
 	* Ticket Fly API
 	* Sockets
-  * Tags and search
-  * Past events
-  * Multi-city option (filter index by location)
-  * Web Sockets
-	* passport
+	* Tags and search
+	* Past events
+	* Multi-city option (filter index by location)
+	* Web Sockets
+	* Passport
 	* Mail Chimp
 
  
