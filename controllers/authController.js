@@ -17,12 +17,13 @@ router.get('/login', (req, res) => {
 
 //LOGIN FORM
 router.post('/login', (req, res) => {
-  User.findOne({username: reg.body.username}, (err, user) => {
+  User.findOne({username: req.body.username}, (err, user) => {
     if (user) {
+      console.log(chalk.green(user));
       if (bcrypt.compareSync(req.body.password, user.password)) {
         req.session.username = user.username;
         req.session.loggedIn = true;
-        res.redirect('/articles')
+        res.redirect('/events')
       } else {
         req.session.message = 'password is incorrect';
         res.redirect('/login')
