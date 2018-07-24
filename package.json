@@ -1,8 +1,8 @@
 {
   "name": "groupproject",
   "version": "1.0.0",
-  "description": "“What’s Happening?” is a website where any visitor can either see events or if logged in, can create, read, update, and delete events.  \r This full-stack web application group project, is intended for users to find events happening at or near a location they might be interested to attend.",
-  "main": "server.js",
+  "description": "I am really tired of Github. I am getting there though.",
+  "main": "config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
@@ -29,7 +29,7 @@
     "heroku": "^7.7.4",
     "method-override": "^3.0.0",
     "mongodb": "^3.1.1",
-    "mongoose": "^5.2.4",
+    "mongoose": "^5.2.5",
     "nodemon": "^1.18.3"
   }
 }
