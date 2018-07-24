@@ -4,9 +4,25 @@
 
       <!-- replace username with email address -->
       <input type="name" name="username" placeholder="username"> <br>
-      <input type="password" name="password" placeholder="password"> <br>
-
-
+      <input id="hidePassword" type="password" name="password" placeholder="password">
+      <input type="checkbox" onclick="Toggle()">
+     Show Password<br>
       <button type="submit">Register</button>
+
+      <script>
+        // Change the type of input to password or text
+            function Toggle() {
+                var temp = document.getElementById("hidePassword");
+                if (temp.type === "password") {
+                    temp.type = "text";
+                }
+                else {
+                    temp.type = "password";
+                }
+            }
+    </script>
+
+
+
     </form>
 </section>
