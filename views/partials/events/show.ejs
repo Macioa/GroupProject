@@ -1,0 +1,26 @@
+<section>
+  <small>by:<%=user.name%></small>
+  <ul>
+    <li>Name:
+      <%=event.name%>
+    </li><br/>
+    <li>Date:
+      <%=event.date%>
+    </li><br/>
+    <li>Time:
+      <%=event.time%>
+    </li><br/>
+    <li>Location:
+      <%=event.location%>
+    </li><br/>
+    <li>Type:
+      <%=event.type%>
+    </li><br/>
+    <li>About Event:
+      <%=event.about%><br/>
+  </ul>
+  <a href="/events/<%=event._id%>/edit">Edit</a>
+  <form action="/events/<%=event._id%>?_method=DELETE" method="post">
+    <input type="submit" value="Delete Event" />
+    </ul>
+</section>
