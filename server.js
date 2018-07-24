@@ -29,8 +29,8 @@ app.use( helmet() );
 
 app.use(session({
   secret: 'this is a random secret string that you make up',
-  resave: false, //only save when the session object has been modified.
-  saveUninitialized: false //useful for login sessins. we only want to save when we modify the session. Always use this. It reduces server storage and complies with laws.
+  resave: false, 
+  saveUninitialized: false 
 }))
 
 
