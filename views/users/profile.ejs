@@ -11,8 +11,8 @@
 <% include ../nav.ejs %>
     </header>
 
-
-
+<h2>My Profile</h2>
+  <% include ../partials/auth/edit.ejs %>
 
 <h2>Hosted Events</h2>
     <% var eventList = hostedEvents %>
@@ -21,6 +21,8 @@
 <h2>Attended Events</h2>
     <% var eventList = attendedEvents %>
     <% include ../partials/events/list.ejs %>
+
+
 
 
     <footer>
