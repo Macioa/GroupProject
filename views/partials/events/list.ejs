@@ -1,5 +1,11 @@
 <section>
-
-<-- List events here, requires User and Event List -->
-
+  <h2>List of Events</h2>
+        <ul>
+          <% for(let i = 0; i < Event.length; i++){ %>
+            <li>
+              <a href="/events/<%=event[i]._id%>"><%=event[i].name%></a>
+            </li>
+          <% } %>
+        </ul>
+      </main>
 <section>
