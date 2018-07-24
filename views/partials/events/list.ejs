@@ -1,9 +1,9 @@
 <section>
   <h2>List of Events</h2>
         <ul>
-          <% for(let i = 0; i < Event.length; i++){ %>
+          <% for(let i = 0; i < events.length; i++){ %>
             <li>
-              <a href="/events/<%=event[i]._id%>"><%=event[i].name%></a>
+              <a href="/events/<%=events[i]._id%>"><%=event[i].name%></a>
             </li>
           <% } %>
         </ul>

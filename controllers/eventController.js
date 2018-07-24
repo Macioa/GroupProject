@@ -24,7 +24,7 @@ router.get('/', async (req, res, err) => {
     console.log('hits index route!')
     const foundEvents = await Event.find();
     res.render('./home.ejs', {
-      event: foundEvents,
+      events: foundEvents,
     });
 
   } catch (err) {
