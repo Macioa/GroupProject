@@ -1,7 +1,7 @@
 <nav class="NavBar">
 
 <button id="navButton">&#x2630</button>
-      <div class='navbar'>
+      <div class='navbar' id="navbar">
       <ul>
         <li><a href="/events">Global Events</a></li>
         <!--if logged in-->
@@ -13,5 +13,13 @@
         <li><a href="/about">About</a></li>
       </ul>
       </div>
+<script>
+document.getElementById('navButton').onclick = ()=>{
+  let navbar = document.getElementById('navbar');
+  if (navbar.style.visibility=='hidden')
+    navbar.style.visibility='visible';
+  else navbar.style.visibility='hidden';
+}
 
+</script>
 </nav>
