@@ -11,7 +11,7 @@ router.post('/', async (req, res) => {
   try {
     console.log(' hits the post route');
     const newEvent = await Event.create(req.body);
-      res.redirect('/home');
+      res.redirect('/events');
       } catch (err) {
         console.log(req.body);
         res.send(err, ' not creating a post');
