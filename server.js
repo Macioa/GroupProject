@@ -8,6 +8,7 @@ const express = require('express');
 const app = express();
 const session = require('express-session');
 
+
 var mongoose = require('./db/db')
 mongoose = mongoose(`mongodb+srv://${config.dbUser}:${config.dbPass}@cluster0-s0zvo.gcp.mongodb.net/test?retryWrites=true`);
 
@@ -29,8 +30,8 @@ app.use( helmet() );
 
 app.use(session({
   secret: 'this is a random secret string that you make up',
-  resave: false, //only save when the session object has been modified.
-  saveUninitialized: false //useful for login sessins. we only want to save when we modify the session. Always use this. It reduces server storage and complies with laws.
+  resave: false,
+  saveUninitialized: false
 }))
 
 
@@ -58,7 +59,7 @@ app.get('/login', (req, res, next)=>{
 })
 
 app.get('/about', (req, res)=>{
-    res.render('users/about.ejs')
+    res.render('./about.ejs')
 })
 
 app.get('*', (req, res)=>{

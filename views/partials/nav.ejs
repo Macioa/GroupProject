@@ -1,13 +1,27 @@
 <nav class="NavBar">
 
-<button id="navButton">&#x2630<button>
-      <div class='navbar'>
+<button id="navButton">&#x2630</button>
+      <div class='navbar' id="navbar">
       <ul>
-        <li><a href="/">Home</a></li>
+        <li><a href="/events">Global Events</a></li>
+        <!--if logged in-->
         <li><a href="/:id/profile">My Profile</a></li>
-        <li><a href="/login">Login</a></li>
         <li><a href="/logout">Logout</a></li>
+        <!-- if not logged in-->
+        <li><a href="/auth/login">Login</a></li>
+        <!-- -->
+        <li><a href="/about">About</a></li>
       </ul>
       </div>
+<script>
+document.getElementById('navbar').style.visibility='hidden'
 
+document.getElementById('navButton').onclick = ()=>{
+  let navbar = document.getElementById('navbar');
+  if (navbar.style.visibility=='hidden')
+    navbar.style.visibility='visible';
+  else navbar.style.visibility='hidden';
+}
+
+</script>
 </nav>

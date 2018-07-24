@@ -4,17 +4,17 @@ const chalk = require('chalk');
 //const User = require('../Models/user');
 const Event = require('../models/event');
 //const Location = require('../Models/Location');
-
-
+console.log(chalk.green('eventController connected'));
 
 //////////// CREATE
 router.post('/', async (req, res) => {
   try {
     console.log(' hits the post route');
     const newEvent = await Event.create(req.body);
-    res.redirect('/events');
-  } catch (err) {
-    res.send(err, ' not creating a post');
+      res.redirect('/events');
+      } catch (err) {
+        console.log(req.body);
+        res.send(err, ' not creating a post');
   }
 });
 
@@ -33,8 +33,8 @@ router.get('/', async (req, res, err) => {
 });
 
 ////New
-router.get('events/new', (req, res) => {
-  res.render('events/New.ejs')
+router.get('/new', (req, res) => {
+  res.render('events/new.ejs')
 })
 
 /// SHOW
@@ -42,7 +42,7 @@ router.get('/:id', async (req, res, next) => {
   try {
     console.log('hits the show page');
     const foundEvent = await Event.findById(req.params.id);
-    res.render('events/Show.ejs', {
+    res.render('events/show.ejs', {
       event: foundEvent,
     });
   } catch (err) {
@@ -55,7 +55,7 @@ router.get('/:id/edit', async (req, res) => {
   try {
     console.log('hits the edit page')
     const foundEvent = await Event.findById(req.params.id);
-    res.render('Events/edit.ejs', {
+    res.render('events/edit.ejs', {
       event: foundEvent,
     });
   } catch (err) {
@@ -76,7 +76,6 @@ router.put('/:id', async (req, res) => {
     res.send(err, ' error for update route');
   }
 });
-
 
 
 // DELETE AN AUTHOR DELETE THE ASSOCIATED ARTICLES

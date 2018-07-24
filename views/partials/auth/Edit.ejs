@@ -1,5 +1,25 @@
 <section>
 
-<-- Edit user form here, needs user
+<form action="/:id/profile" method="put" method="post">
+
+
+Username:<br>
+<input type="text" name="username" value="<%=user.username%>"><br>
+Password:<br>
+<input type="text" name="password" value="<%=user.password%>"><br>
+Email:<br>
+<input type="email" name="emailAddress" value="<%=user.emailAddress%>"><br>
+First Name:<br>
+<input type="text" name="firstName" value="<%=user.firstName%>"><br>
+Last Name:<br>
+<input type="text" name="lastName" value="<%=user.lastName%>"><br>
+Img URL:<br>
+<input type="url" name="image" value="<%=user.image%>"><br>
+Organization:<br>
+<input type="organization" name="orginazation" value="<%=user.orginzation%>"/><br>
+<br>
+<input type="submit" value="Update">
+
+</form>
 
 </section>

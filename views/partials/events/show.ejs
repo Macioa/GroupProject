@@ -1,5 +1,4 @@
 <section>
-  <small>by:<%=user.name%></small>
   <ul>
     <li>Name:
       <%=event.name%>
@@ -20,7 +19,7 @@
       <%=event.about%><br/>
   </ul>
   <a href="/events/<%=event._id%>/edit">Edit</a>
-  <form action="/events/<%=event._id%>?_method=DELETE" method="post">
+  <form action="/events/<%=event._id%>?_method=DELETE" method="POST">
     <input type="submit" value="Delete Event" />
     </ul>
 </section>
