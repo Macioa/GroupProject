@@ -7,12 +7,23 @@ const Event = require('../models/event');
 
 
 
+//////////// CREATE
+router.post('/', async (req, res) => {
+  try {
+    console.log(' hits the post route');
+    const newEvent = await Event.create(req.body);
+    res.redirect('/events');
+  } catch (err) {
+    res.send(err, ' not creating a post');
+  }
+});
+
 // INDEX
 router.get('/', async (req, res, err) => {
   try {
-    console.log('hits index route')
+    console.log('hits index route!')
     const foundEvents = await Event.find();
-    res.render('home.ejs', {
+    res.render('./home.ejs', {
       event: foundEvents,
     });
 
@@ -66,16 +77,7 @@ router.put('/:id', async (req, res) => {
   }
 });
 
-//////////// CREATE
-router.post('/', async (req, res) => {
-  try {
-    console.log(' hits the post route');
-    const newEvent = await Event.create(req.body);
-    res.redirect('/events');
-  } catch (err) {
-    res.send(err, ' not creating a post');
-  }
-});
+
 
 // DELETE AN AUTHOR DELETE THE ASSOCIATED ARTICLES
 router.delete('/:id', async (req, res) => {
