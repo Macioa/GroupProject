@@ -10,18 +10,18 @@
   </head>
   <body>
     <header>
-<% include ../nav.ejs %>
+<% include ../partials/nav.ejs %>
     </header>
 
 <h2>My Profile</h2>
   <% include ../partials/auth/edit.ejs %>
 
 <h2>Hosted Events</h2>
-    <% var eventList = hostedEvents %>
+    <% var events = hostedEvents %>
     <% include ../partials/events/list.ejs %>
 
 <h2>Attended Events</h2>
-    <% var eventList = attendedEvents %>
+    <% var events = attendedEvents %>
     <% include ../partials/events/list.ejs %>
 
 
