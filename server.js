@@ -58,7 +58,7 @@ app.get('/login', (req, res, next)=>{
 })
 
 app.get('/about', (req, res)=>{
-    res.render('users/about.ejs')
+    res.render('./about.ejs')
 })
 
 app.get('*', (req, res)=>{
