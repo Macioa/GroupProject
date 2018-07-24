@@ -10,9 +10,9 @@ password: {type: String},// required: true, minlength: 8, maxlength: 16, trim: t
 hostedEvents: [String],
 attendedEvents: [String],
 firstName: {type: String},// required: false},
-lastName: {type: String,},// required: false},
+lastName: {type: String},// required: false},
 image: String,
-emailAddress: {type: String,},// required: false},
+emailAddress: {type: String},// required: false},
 organization: String,
 });
 
