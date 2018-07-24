@@ -42,7 +42,7 @@ router.get('/:id', async (req, res, next) => {
   try {
     console.log('hits the show page');
     const foundEvent = await Event.findById(req.params.id);
-    res.render('events/Show.ejs', {
+    res.render('events/show.ejs', {
       event: foundEvent,
     });
   } catch (err) {
