@@ -16,7 +16,8 @@ router.get('/:id/profile', (req, res) => {
         res.render('./users/profile.ejs', {
             user: foundUser, //foundUser is what findById is referring to.
             hostedEvents: foundUser.hostedEvents,
-            attendedEvents: foundUser.attendedEvents
+            attendedEvents: foundUser.attendedEvents,
+            username: req.session.username
           })
         })
     })

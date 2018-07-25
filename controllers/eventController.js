@@ -34,7 +34,9 @@ router.get('/', async (req, res, err) => {
 
 ////New
 router.get('/new', (req, res) => {
-  res.render('events/new.ejs')
+  res.render('events/new.ejs', {
+    username: req.session.username,
+  });
 })
 
 /// SHOW
