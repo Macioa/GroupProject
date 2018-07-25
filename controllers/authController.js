@@ -24,7 +24,8 @@ router.post('/login', (req, res) => {
         req.session.username = user.username;
         req.session.loggedIn = true;
         res.redirect(`/user/${user._id}/profile`);
-        console.log(user)
+        console.log(chalk.blue('user is good to go!'))
+        console.log(chalk.red(req.session));
       } else {
         req.session.message = 'password is incorrect';
         res.redirect('/auth/login')
@@ -68,6 +69,21 @@ router.post('/register', async (req, res, next) => {
       }
        })
     });
+
+
+//LOGOUT ROUTE
+router.get('/logout', (req, res) => {
+  req.session.destroy((err) => {
+    if (err) {
+      console.log(chalk.red('error destroying session'));
+      res.send('error destroying session');
+    } else {
+      console.log(chalk.blue('redirects correctly'));
+      res.redirect('/events');
+    }
+  })
+})
+
 
 
       module.exports = router;
