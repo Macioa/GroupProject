@@ -23,15 +23,20 @@ router.post('/login', (req, res) => {
       if (bcrypt.compareSync(req.body.password, user.password)) {
         req.session.username = user.username;
         req.session.loggedIn = true;
-        res.redirect('/events')
+        req.session.userId = user._id;
+        res.redirect(`/user/${user._id}/profile`);
+        console.log(chalk.blue('user is good to go!'))
+        console.log(chalk.red(req.session));
       } else {
         req.session.message = 'password is incorrect';
-        res.redirect('/login')
+        res.redirect('/auth/login')
+        console.log(user)
       }
     } else {
       console.log('no username found');
       req.session.message = 'Username is incorrect;'
-      res.redirect('/login')
+      res.redirect('/auth/login')
+      console.log(user)
     }
   })
 })
@@ -49,26 +54,36 @@ router.post('/register', async (req, res, next) => {
       userDbEntry.username = req.body.username;
       userDbEntry.password = passwordHash;
       console.log(passwordHash);
-
       console.log(chalk.green('asdf'))
       // password into databse
       console.log(userDbEntry)
-      let user = await User.create(userDbEntry, (err, user) => { 
-        if (err)
+      let user = await User.create(userDbEntry, (err, user) => {
+        if (err) {
           console.error(err)
-        else console.log(user)
+}
+        else  {
+          console.log(chalk.blue(user))
+          // session set up
+          req.session.username = user.username;
+          req.session.loggedIn = true;
         res.redirect(`/user/${user._id}/profile`);
-       })  
-      console.log(chalk.yellow(user))
-
-      // session set up
-     // req.session.username = user.username;
-     // req.session.loggedIn = true;
-     
-
+      }
+       })
     });
 
 
+//LOGOUT ROUTE
+router.get('/logout', (req, res) => {
+  req.session.destroy((err) => {
+    if (err) {
+      console.log(chalk.red('error destroying session'));
+      res.send('error destroying session');
+    } else {
+      console.log(chalk.blue('redirects correctly'));
+      res.redirect('/events');
+    }
+  })
+})
 
 
 
