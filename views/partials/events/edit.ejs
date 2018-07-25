@@ -1,6 +1,7 @@
   <section class="partials">
   <form class="forms" action="/events/<%=event._id%>?_method=PUT" method="post">
           <input type="text" name="Name" value="<%=event.name%>"/><br/>
+          <input type="text" name="Host" value="<%=event.host%>"/><br/>
           <input type="date" name="Date" value="<%=event.date%>"  /><br/>
           <input type='text' name="Time" value="<%=event.time%>"/><br/>
           <input type='text' name="Location" value="<%=event.location%>"/><br/>
