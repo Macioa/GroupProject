@@ -23,6 +23,7 @@ router.post('/login', (req, res) => {
       if (bcrypt.compareSync(req.body.password, user.password)) {
         req.session.username = user.username;
         req.session.loggedIn = true;
+        req.session.userId = user._id;
         res.redirect(`/user/${user._id}/profile`);
         console.log(chalk.blue('user is good to go!'))
         console.log(chalk.red(req.session));

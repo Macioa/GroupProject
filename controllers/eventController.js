@@ -1,18 +1,27 @@
 const express = require('express');
 const router = express.Router();
 const chalk = require('chalk');
-//const User = require('../Models/user');
 const Event = require('../models/event');
+const User = require('mongoose').model('User')
 //const Location = require('../Models/Location');
 console.log(chalk.green('eventController connected'));
 
 //////////// CREATE
 router.post('/', async (req, res) => {
-  console.log(chalk.yellow('hgfghfhgffghfhg',req.session));
   try {
-    console.log(' hits the post route');
-    const newEvent = await Event.create(req.body);
+    console.log(' hits the post route', req.session.userId);
+
+    const findUser = User.findById(req.session.userId);
+    const createEvent = Event.create(req.body);
+    const [foundUser, createdEvent] = await Promise.all([findUser, createEvent]);
+		console.log(foundUser, ' this is foundUser at CREATE route');
+    console.log(createdEvent, ' this is createdEvent at CREATE route');
+
+    foundUser.hostedEvents.push(createdEvent);
+    await foundUser.save();
+
       res.redirect('/events');
+
       } catch (err) {
         console.log(req.body);
         res.send(err, ' not creating a post');
@@ -35,10 +44,12 @@ router.get('/', async (req, res, err) => {
 
 ////New
 router.get('/new', (req, res) => {
-  res.render('events/new.ejs', {
-    username: req.session.username,
-  });
-})
+		res.render('events/new.ejs', {
+      username: req.session.username,
+		});
+});
+
+
 
 /// SHOW
 router.get('/:id', async (req, res, next) => {
