@@ -4,9 +4,28 @@
 
       <!-- replace username with email address -->
       <input type="name" name="username" placeholder="username"> <br>
-      <input type="text" name="password" placeholder="password"> <br>
+
+      <input id="hidePasswordReg" type="password" name="password" placeholder="password">
+
+
+      <input type="checkbox" onclick="ToggleR()">
+     Show Password<br>
+      <button type="submit">Register</button>
+
+      <script>
+            function ToggleR() {
+                var temp = document.getElementById("hidePasswordReg");
+                if (temp.type === "password") {
+                    temp.type = "text";
+                }
+                else {
+                    temp.type = "password";
+                }
+            }
+    </script>
 
 
       <button class="buttons" type="submit">Register</button>
+
     </form>
 </section>
