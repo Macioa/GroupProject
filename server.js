@@ -36,14 +36,12 @@ app.use(session({
 
 
 //         Controllers
-
 const userController = require('./controllers/userController');
-app.use('/user', userController)
-
 const authController = require('./controllers/authController');
-app.use('/auth', authController)
-
 const eventController = require('./controllers/eventController');
+
+app.use('/user', userController)
+app.use('/auth', authController)
 app.use('/events', eventController)
 
 //         Default pages

@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const Event = require('./event');
 
 
+
 const userSchema = mongoose.Schema({
 
 username: {type: String},// required: true},
