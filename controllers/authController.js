@@ -70,4 +70,23 @@ router.post('/register', async (req, res, next) => {
     });
 
 
+//LOGOUT ROUTE
+
+router.get('/logout', (req, res) => {
+  req.session.destroy((err) => {
+    if (err) {
+      console.log(chalk.red('error destroying session'));
+      res.send('error destroying session');
+    } else {
+      console.log(chalk.blue('redirects correctly'));
+      // res.redirect('/home');
+    }
+  })
+})
+
+
+
+
+
+
       module.exports = router;
