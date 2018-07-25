@@ -8,6 +8,7 @@ console.log(chalk.green('eventController connected'));
 
 //////////// CREATE
 router.post('/', async (req, res) => {
+  console.log(chalk.yellow('hgfghfhgffghfhg',req.session));
   try {
     console.log(' hits the post route');
     const newEvent = await Event.create(req.body);

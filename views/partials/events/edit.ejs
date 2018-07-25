@@ -1,12 +1,12 @@
   <section class="partials">
-  <form class="forms" action="/events/<%=event._id%>?_method=PUT" method="post">
-          <input type="text" name="Name" value="<%=event.name%>"/><br/>
-          <input type="text" name="Host" value="<%=event.host%>"/><br/>
-          <input type="date" name="Date" value="<%=event.date%>"  /><br/>
-          <input type='text' name="Time" value="<%=event.time%>"/><br/>
-          <input type='text' name="Location" value="<%=event.location%>"/><br/>
-          <input type='text' name="Type" value="'<%=event.type%>'"/><br/>
-          <input type='text' name="About" value="<%=event.about%>"/><br/>
-          <input class="buttons" type="submit" value="Update Event"/>
+  <form class="forms" action="/events/<%=event._id%>?_method=PUT" method="POST">
+          <input type="text" name="name" value="<%=event.name%>"/><br/>
+          <input type="text" name="host" value="<%=event.host%>"/><br/>
+          <input type="date" name="date" value="<%=event.date%>"  /><br/>
+          <input type='text' name="time" value="<%=event.time%>"/><br/>
+          <input type='text' name="location" value="<%=event.location%>"/><br/>
+          <input type='text' name="type" value="'<%=event.type%>'"/><br/>
+          <input type='text' name="about" value="<%=event.about%>"/><br/>
+          <button class="buttons" type="submit">Update Event</button>
         </form>
   </section>

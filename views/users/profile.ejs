@@ -16,7 +16,11 @@
   <% include ../partials/auth/edit.ejs %>
 <a class="links" href="/events/new">Add New Event</a>
 <h2>Hosted Events</h2>
-    <% var events = hostedEvents %>
+<ul>
+  <% for (let i = 0; i < user.length; i++){%>
+       <li><a href="/user/<%=user[i].id%>"><%=user[i].hostedEvents %></a></li>
+  <%}%>
+</ul>
 
 
 <h2>Attended Events</h2>
