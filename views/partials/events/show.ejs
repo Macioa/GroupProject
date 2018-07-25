@@ -1,4 +1,4 @@
-<section>
+<section class="partials">
   <ul>
     <li>Name:
       <%=event.name%>
@@ -19,7 +19,7 @@
       <%=event.about%><br/>
   </ul>
   <a href="/events/<%=event._id%>/edit">Edit</a>
-  <form action="/events/<%=event._id%>?_method=DELETE" method="POST">
-    <input type="submit" value="Delete Event" />
-    </ul>
+  <form class="forms" action="/events/<%=event._id%>?_method=DELETE" method="POST">
+    <input class="buttons" type="submit" value="Delete Event" />
+  </form>
 </section>
