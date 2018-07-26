@@ -29,7 +29,6 @@ router.get('/', async (req, res, err) => {
     const foundEvents = await Event.find();
     res.render('home.ejs', {
       events: foundEvents,
-      username: req.session.username,
     });
 
   } catch (err) {
