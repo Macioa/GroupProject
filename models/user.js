@@ -6,8 +6,8 @@ const userSchema = mongoose.Schema({
 
 username: {type: String},// required: true},
 password: {type: String},// required: true, minlength: 8, maxlength: 16, trim: true},
-hostedEvents: [String],
-attendedEvents: [String],
+hostedEvents: [Event.schema],
+attendedEvents: [Event.schema],
 firstName: {type: String},// required: false},
 lastName: {type: String},// required: false},
 image: String,
