@@ -1,7 +1,8 @@
 <section class="partials">
+<%=user.username%>
+<%=user._id%>
 
-
-<form class="forms" action="/:id/profile?_method=PUT" method="POST">
+<form class="forms" action="/user/<%=user._id%>?_method=PUT" method="POST">
 Username:<br>
 <input type="text" name="username" value="<%=user.username%>"><br>
 Password:<br>

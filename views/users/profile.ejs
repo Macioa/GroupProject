@@ -24,7 +24,8 @@
 
 
 <h2>Attended Events</h2>
-    <% var events = attendedEvents %>
-
+<% for (let i = 0; i < attendedEvents.length; i++){%>
+  <li><a href="/events/<%=attendedEvents[i].id%>"><%=attendedEvents[i].name%></a></li>
+<%}%>
   </body>
 </html>
