@@ -47,21 +47,19 @@ app.use('/events', eventController)
 //         Default pages
 
 app.get(['/home','/'], (req, res, next)=>{
-    next();
-    res.redirect('/events');
+    res.redirect('events');
 })
 
 app.get('/login', (req, res, next)=>{
-    next();
-    res.redirect('/auth/login');
+    res.redirect('auth/login');
 })
 
 app.get('/about', (req, res)=>{
-    res.render('./about.ejs')
+    res.render('about.ejs')
 })
 
 app.get('*', (req, res)=>{
-    res.render('./404.ejs');
+    res.render('404.ejs');
     console.error(chalk.red('Invalid path request: ')+chalk.grey(req.originalUrl))
 })
 
