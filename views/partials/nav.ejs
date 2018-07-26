@@ -6,8 +6,11 @@
         <li><a href="/events">Global Events</a></li>
 
 
-        <li><a href="user/id/profile">My Profile</a></li>
-        <li><a href="/auth/logout">Logout</a></li>
+
+
+        <li><a href="/:id/profile">My Profile</a></li>
+        <li><a href="/auth/logout" id ='logOut'>Logout</a></li>
+
 
 
         <li><a href="/auth/login">Login</a></li>
@@ -28,6 +31,8 @@ document.getElementById('navButton').onclick = ()=>{
     navbar.style.visibility='visible';
   else navbar.style.visibility='hidden';
 }
-
+document.getElementById('logOut').onclick = ()=>{
+  alert('You have been logged Out!');
+}
 </script>
 </nav>
