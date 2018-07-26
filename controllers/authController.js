@@ -27,7 +27,7 @@ router.post('/login', (req, res) => {
         req.session.userId = user._id;
         res.redirect(`/user/${user._id}/profile`);
         console.log(chalk.blue('user is good to go!'))
-        console.log(chalk.red(req.session));
+        console.log(req.session);
       } else {
         req.session.message = 'password is incorrect';
         res.redirect('/auth/login')
@@ -60,7 +60,7 @@ router.post('/register', async (req, res, next) => {
         else  {
           req.session.username = user.username;
           req.session.loggedIn = true;
-          res.redirect(`/user/${user._id}/profile`);
+          // res.redirect(`/user/${user._id}/profile`);
       }
        })
     });
