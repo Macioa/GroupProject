@@ -15,12 +15,15 @@ router.get('/:id/profile', (req, res) => {
         //it was show.ejs but that didn't match the ejs name
         res.render('users/profile.ejs', {
             user: foundUser, //foundUser is what findById is referring to.
-            hostedEvents: foundUser.hostedEvents,
-            attendedEvents: foundUser.attendedEvents,
-            username: req.session.username
+            hostedEvents: foundUser.hostedEvents, //Cannot read property 'hostedEvents' of undefined. needs to find hostedEvents to a user. The overall problem is it's not finding the user in foundUser
+            //
+            // attendedEvents: foundUser.attendedEvents,
+            // username: req.session.username
           })
         })
     })
+
+
 
   //GET THE USER'S EDIT PAGE.
 router.get('/:id/edit', (req, res) => {
@@ -55,5 +58,4 @@ router.put('/:id', (req, res) => {
 
 
 
-
-    module.exports = router;
+module.exports = router;
