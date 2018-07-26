@@ -13,7 +13,7 @@ router.get('/:id/profile', (req, res) => {
     User.findById(req.params.id, (err, foundUser) => {
       console.log(chalk.green(`id match ${foundUser}`));
         //it was show.ejs but that didn't match the ejs name
-        res.render('/users/profile.ejs', {
+        res.render('./users/profile.ejs', {
             user: foundUser, //foundUser is what findById is referring to.
             hostedEvents: foundUser.hostedEvents,
             attendedEvents: foundUser.attendedEvents,
