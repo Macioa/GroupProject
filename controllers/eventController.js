@@ -15,7 +15,7 @@ router.post('/', async (req, res) => {
 
     foundUser.hostedEvents.push(createdEvent);
     await foundUser.save();
-
+console.log(chalk.red('TESTINGs'))
       res.redirect('/events');
 
       } catch (err) {
@@ -49,7 +49,7 @@ router.get('/new', (req, res) => {
 router.get('/:id', async (req, res, next) => {
   try {
     const foundEvent = await Event.findById(req.params.id);
-    res.render('/events/show.ejs', {
+    res.render('events/show.ejs', {
       event: foundEvent,
     });
   } catch (err) {
