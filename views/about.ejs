@@ -7,17 +7,21 @@
     <title>What's Happening?</title>
   </head>
   <body>
-  <% include ./partials/nav.ejs %>
+  <% include partials/nav.ejs %>
     <h1>We Are What's Happening</h1>
 
     <img class="cdj" src="">
 
     <div class="contact">
-      <h3>Say Hello</h3>
+      <h3>Stop By Our Office and Say Hello</h3>
+<p>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3445.894437462964!2d-97.74551558540972!3d30.268588814905147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8644b509c0706f9d%3A0xb5c171e36a8626a6!2sWeWork+Congress!5e0!3m2!1sen!2sus!4v1532573171452" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+</p>
 
+  <h3>Or Leave Us a Message</h3>
       <form class="forms" action="/" method="post">
-        <input type="text" placeholder="Leave Comments, Questions, or Suggestions Here!">
-        <textarea name="contactUs"></textarea>
+        <input type="email" placeholder="Email Address">
+        <textarea name="contactUs" placeholder="Leave Comments, Questions, or Suggestions Here"></textarea>
         <input type="submit">
       </form>
     </div>
