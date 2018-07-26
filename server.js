@@ -10,7 +10,7 @@ const session = require('express-session');
 
 
 var mongoose = require('./db/db')
-mongoose = mongoose(`mongodb+srv://${config.dbUser}:${config.dbPass}@cluster0-s0zvo.gcp.mongodb.net/test?retryWrites=true`);
+mongoose = mongoose(`mongodb+srv://${config.dbUser}:${config.dbPass}@cluster0-s0zvo.mongodb.net/test?retryWrites=true`);
 
 
 
@@ -47,19 +47,19 @@ app.use('/events', eventController)
 //         Default pages
 
 app.get(['/home','/'], (req, res, next)=>{
-    res.redirect('/events');
+    res.redirect('events');
 })
 
 app.get('/login', (req, res, next)=>{
-    res.redirect('/auth/login');
+    res.redirect('auth/login');
 })
 
 app.get('/about', (req, res)=>{
-    res.render('/about.ejs')
+    res.render('about.ejs')
 })
 
 app.get('*', (req, res)=>{
-    res.render('/404.ejs');
+    res.render('404.ejs');
     console.error(chalk.red('Invalid path request: ')+chalk.grey(req.originalUrl))
 })
 
