@@ -27,7 +27,7 @@ router.post('/', async (req, res) => {
 router.get('/', async (req, res, err) => {
   try {
     const foundEvents = await Event.find();
-    res.render('/home.ejs', {
+    res.render('home.ejs', {
       events: foundEvents,
     });
 
