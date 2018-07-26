@@ -3,6 +3,34 @@ h1 {
 font-family: 'Philosopher', sans-serif;
 }
 
+
+
+
+/* ABOUT PAGE */
+
 .about {
   margin: 0 auto;
+}
+
+#aboutWrapper {
+    text-align: center;
+     width: 1000px;
+     margin: 0 auto;
+     border: 5px solid black;
+     position: relative;
+}
+#aboutLeft, #aboutRight {
+    border: 1px solid black;
+    float: left;
+    height: 450px;
+    color: white;
+    width: 400px;
+    margin-left: 50px;
+}
+#aboutLeft {
+     background-color: pink;
+}
+
+#aboutRight {
+     background-color: #777;
 }
