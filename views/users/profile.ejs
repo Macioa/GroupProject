@@ -16,8 +16,9 @@
 <a class="links" href="/events/new">Add New Event</a>
 <h2>Hosted Events</h2>
 <ul>
-  <% for (let i = 0; i < hostedEvents.length; i++){ %>
-       <li><a href="/events/<%=hostedEvents[i].id%>"><%=hostedEvents[i]%></a></li>
+
+  <% for (let i = 0; i < hostedEvents.length; i++){%>
+       <li><a href="/events/<%=hostedEvents[i].id%>"><%=hostedEvents[i].name%></a></li>
   <%}%>
 </ul>
 
