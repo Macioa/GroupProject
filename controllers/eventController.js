@@ -15,7 +15,6 @@ router.post('/', async (req, res) => {
 
     foundUser.hostedEvents.push(createdEvent);
     await foundUser.save();
-console.log(chalk.red('TESTINGs'))
       res.redirect('/events');
 
       } catch (err) {

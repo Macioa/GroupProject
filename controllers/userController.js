@@ -37,8 +37,6 @@ router.put('/:id', (req, res) => {
   User.findByIdAndUpdate(req.params.id, req.body, {
     new: true
   }, (err, updatedUser) => {
-    //console.log(`Updated user: ${updatedUser}`);
-    console.log(chalk.green('reuters'))
     res.redirect(`/user/${updatedUser._id}/profile`);
   });
 });
