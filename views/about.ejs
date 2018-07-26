@@ -10,13 +10,15 @@
   <body>
 
 
+<% include partials/header.ejs %>
+
   <% include partials/nav.ejs %>
     <h1 id="title">We Are What's Happening</h1>
 
 
 
 
-<div id="aboutWrapper">
+<div id="aboutWrapper" class="clearfix">
     <div class="contact" id="aboutLeft">
       <h3>Stop By Our Office and Say Hello</h3>
 <p>
@@ -28,13 +30,15 @@
 
   <h3>Or Leave Us a Message</h3>
       <form id="contactUs" action="/" method="post">
+        <textarea id="contactComment" name="contactUs" placeholder="Tell us what's up!"></textarea>
         <input id="contactEmail" type="email" placeholder="Email Address">
-        <textarea id="contactComment" name="contactUs" placeholder="Leave Comments, Questions, or Suggestions Here"></textarea>
         <input type="submit">
       </form>
     </div>
 
   </div>
 
+
+<% include partials/footer.ejs %>
   </body>
 </html>
