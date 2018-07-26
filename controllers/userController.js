@@ -33,11 +33,11 @@ router.get('/:id/edit', (req, res) => {
 
   //UPDATE THE USER'S EDIT PAGE.
 router.put('/:id', (req, res) => {
+  console.log('put route')
   User.findByIdAndUpdate(req.params.id, req.body, {
     new: true
   }, (err, updatedUser) => {
-    console.log(`Updated user: ${updatedUser}`);
-    res.redirect('/:id/profile')
+    res.redirect(`/user/${updatedUser._id}/profile`);
   });
 });
 

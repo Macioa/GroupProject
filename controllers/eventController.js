@@ -15,7 +15,6 @@ router.post('/', async (req, res) => {
 
     foundUser.hostedEvents.push(createdEvent);
     await foundUser.save();
-console.log(chalk.red('TESTINGs'))
       res.redirect('/events');
 
       } catch (err) {
@@ -26,8 +25,8 @@ console.log(chalk.red('TESTINGs'))
 // INDEX
 router.get('/', async (req, res, err) => {
   try {
-    const foundEvents = await Event.find();
-    res.render('home.ejs', {
+      const foundEvents = await Event.find();
+      res.render('home.ejs', {
       events: foundEvents,
     });
 
@@ -48,8 +47,8 @@ router.get('/new', (req, res) => {
 /// SHOW
 router.get('/:id', async (req, res, next) => {
   try {
-    const foundEvent = await Event.findById(req.params.id);
-    res.render('events/show.ejs', {
+      const foundEvent = await Event.findById(req.params.id);
+      res.render('events/show.ejs', {
       event: foundEvent,
     });
   } catch (err) {
@@ -60,8 +59,8 @@ router.get('/:id', async (req, res, next) => {
 ///// EDIT
 router.get('/:id/edit', async (req, res) => {
   try {
-    const foundEvent = await Event.findById(req.params.id);
-    res.render('events/edit.ejs', {
+      const foundEvent = await Event.findById(req.params.id);
+      res.render('events/edit.ejs', {
       event: foundEvent,
     });
   } catch (err) {

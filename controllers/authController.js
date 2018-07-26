@@ -30,7 +30,7 @@ router.post('/login', (req, res) => {
         console.log(req.session);
       } else {
         req.session.message = 'password is incorrect';
-        res.redirect('/auth/login')
+        res.redirect('/auth/login');
         console.log(user)
       }
     } else {
