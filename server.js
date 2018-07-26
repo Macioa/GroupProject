@@ -12,7 +12,7 @@ const session = require('express-session');
 var mongoose = require('./db/db')
 mongoose = mongoose(`mongodb+srv://${config.dbUser}:${config.dbPass}@cluster0-s0zvo.mongodb.net/test?retryWrites=true`);
 
-
+app.use(express.static('public'));
 
 
 //         Middleware
