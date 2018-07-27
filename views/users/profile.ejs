@@ -4,17 +4,27 @@
     <title></title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
   </head>
   <body>
-    <header>
-<% include ../partials/nav.ejs %>
-    </header>
 
-<h2>Hello, <%=username%> </h2>
-<h4>My Profile</h4>
-  <% include ../partials/auth/edit.ejs %>
-<a class="links" href="/events/new">Add New Event</a>
+
+<% include ../partials/nav.ejs %>
+
+
+<h2 id="profileTitle"><%=username%>'s Profile </h2>
+
+
+<div class="profilePage" c>
+
+  <div class="infoColumn">
+<h2>My Info</h2>
+    <% include ../partials/auth/edit.ejs %>
+  <a class="links" href="/events/new">Add New Event</a>
+
+  </div>
+
+<div class="eventsColumn">
 <h2>Hosted Events</h2>
 <ul>
   <% for (let i = 0; i < hostedEvents.length; i++){%>
@@ -27,5 +37,9 @@
 <% for (let i = 0; i < attendedEvents.length; i++){%>
   <li><a href="/events/<%=attendedEvents[i].id%>"><%=attendedEvents[i].name%></a></li>
 <%}%>
-  </body>
+</div>
+
+<% include ../partials/footer.ejs %>
+
+</body>
 </html>

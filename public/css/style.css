@@ -1,19 +1,22 @@
 
 body {
+  font-family: 'Cardo', serif;
   background-color: #f7f7f7;
-  margin: -25px 0px 0px 0px;
+  margin: -32px 0px 0px 0px;
   padding: 0;
 }
 
 h1 {
-font-family: 'Philosopher', sans-serif;
+text-align: center;
 }
 
 
-/* HEADER */
+/* =========================  HEADER  ========================== */
 
 #header {
-  background-color: blue;
+  background-color: #F2F0E6;
+  line-height: 100px;
+  font-size: 24px;
   text-align: center;
   height: 100px;
   padding: 0px;
@@ -22,12 +25,13 @@ font-family: 'Philosopher', sans-serif;
 }
 
 
-/* ABOUT PAGE */
+
+/* =========================  ABOUT PAGE  ========================== */
 
 #title {
   text-align: center;
   text-transform: capitalize;
-  background-color: #F2F0E6;
+  background-color: #D9D6DC;
   width: 1100px;
   height: 100px;
   margin: 0 auto;
@@ -35,13 +39,6 @@ font-family: 'Philosopher', sans-serif;
   line-height: 100px;
 }
 
-.clearfix:after {
-   content: " "; /* Older browser do not support empty content */
-   visibility: hidden;
-   display: block;
-   height: 0;
-   clear: both;
-}
 
 
 #contactComment, #contactEmail {
@@ -62,12 +59,11 @@ font-family: 'Philosopher', sans-serif;
 }
 
 
-
 #aboutWrapper {
     text-align: center;
      width: 1000px;
      margin: 0 auto;
-     background-color: #F2F0E6;
+     background-color: #D9D6DC;
      /* border: 5px solid black; */
      position: relative;
      padding: 50px;
@@ -84,12 +80,200 @@ font-family: 'Philosopher', sans-serif;
     margin-left: 50px;
 }
 
-#about {
-  background-color: blue;
-  text-transform: capitalize;
+
+
+/* =========================  HOME  ========================== */
+
+.hello {
+  text-align: center;
+  font-size: 32px;
+}
+
+#listWrapper {
+  width: 90%;
+  height: 500px;
+  margin: 0 auto;
+  background-color: #F2F0E6;
+  text-align: center;
+  display: inline;
+  /* margin: 0 auto; */
+  /* display: flex; */
+  /* position: relative; */
+}
+
+#listDiv {
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 2%;
+    border: 1px solid black;
+    height: 450px;
+    width: 600px;
+margin-bottom: 25px;
+  /* text-align: center; */
+    /* vertical-align: middle; */
+    /* display: inline-block; */
+    /* position: relative; */
+    /* margin-top: 25px; */
+}
+
+.list {
+  font-size: 24px;
+}
+
+
+.homeImages {
+  display: flex;
+  justify-content: center;
+}
+
+.atx {
+  height: 300px;
+  width: 25%;
+  border-radius: 50%;
+  /* margin: 0 auto; */
+  display: inline-block;
+  /* margin-left: 50px; */
+}
+
+#centerImg {
+  margin-left: 75px;
+  margin-right: 75px;
+}
+
+
+/*List of Events */
+
+/* #listOfEvents {
+  background-color: white;
+  border-radius: 2%;
+    border: 1px solid black;
+    height: 400px;
+    width: 600px;
+    margin-left: 50px;
+    margin: 0 auto;
+    position: relative;
+} */
+
+#listTitle {
+  margin-top: 40px;
+}
+
+#eventLi {
+  padding: 50px;
+}
+
+ul {
+    list-style-type: none;
+    /* padding: 20px; */
+}
+
+/* =========================  FOOTER  ========================== */
+
+#footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #F2F0E6;
+  text-align: center;
+  margin: 0 auto;
+  line-height: 35px;
+  /* display: ; */
+  position: relative;
+}
+
+
+/* =========================  LOGIN PAGE  ========================== */
+
+.loginBanner {
+  margin-left: 5%;
+  width: 90%;
+  height: 150px;
+}
+
+#welcome {
   margin: 0 auto;
 }
 
-.headerTitle {
-  text-transform: capitalize;
+#lrWrapper {
+  background-color: #e5e5e5;
+  width: 90%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.lrDiv {
+   background-color: white;
+   border-radius: 2%;
+    border: 1px solid black;
+    height: 200px;
+    width: 400px;
+    float: left;
+}
+
+.lrForms {
+  margin-left: 100px;
+}
+
+.lrInput {
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+.submit {
+  padding: 5px;
+  background-color: #F2F0E6;
+  border-radius: 15%;
+}
+
+h3 {
+  text-align: center;
+}
+
+/* =========================  PROFILE PAGE  ========================== */
+
+#profileTitle {
+  text-align: center;
+  font-size: 42px;
+}
+
+.profilePage {
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 2%;
+   border: 1px solid black;
+   height: 500px;
+   width: 80%;
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.eventsColumn, .infoColumn {
+  margin-top: 50px;
+  float: left;
+  width: 40%;
+}
+
+.clearfix:after {
+   content: " "; /* Older browser do not support empty content */
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+
+#errorPage {
+  margin: 0 auto;
+  align-items: center;
+  text-align: center;
+}
+
+.devito {
+  margin-bottom: 20px;
+  border-radius: 50%;
 }

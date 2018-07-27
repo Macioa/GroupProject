@@ -1,23 +1,30 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <title></title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/style.css" rel="stylesheet">
+    <!-- <link href="css/reset.css" rel="stylesheet"> -->
+    <link href="/css/style.css" rel="stylesheet">
+
     <link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
-
-
+    <title>What's Happening?</title>
   </head>
+
+
   <body>
+<% include partials/header.ejs %>
 <% include partials/nav.ejs %>
 
 
+<img src="http://www.kpac.or.jp/img/event/main_img.jpg" class="loginBanner">
+
 <h1>Welcome to What's Happening</h1>
 
+<div id="lrWrapper">
 <% include partials/auth/login.ejs %>
-
 <% include partials/auth/register.ejs %>
+</div>
+
 
 <% include partials/footer.ejs %>
 

@@ -66,6 +66,7 @@ app.get('*', (req, res)=>{
 
 var port = process.env.PORT||config.port;
 app.listen(port, ()=>{
+   // router.css(request, response);
     console.log();
     console.log(chalk.green("What's up? ")+chalk.grey(`Listening on port ${port}`))
 });

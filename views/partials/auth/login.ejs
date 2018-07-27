@@ -1,19 +1,22 @@
+
+
+  <div class="lrDiv">
 <section class="partials">
      <h3>Login</h3>
-     <form class="forms" action = "/auth/login" method="POST">
-       Username: <input type="text" name="username" placeholder="username"><br>
+     <form class="lrForms" action = "/auth/login" method="POST">
+       <input class="lrInput" type="text" name="username" placeholder="username"><br>
 
 
-       Password: <input id="hidePasswordLog" type="password" name="password" placeholder="password">
+       <input class="lrInput" id="hidePasswordLog" type="password" name="password" placeholder="password">
 
          <input type="checkbox" onclick="ToggleLI()">
         Show Password<br>
-        <button type="submit">Login</button>
+        <button class="submit" type="submit">Login</button>
 
 
+</div>
 
        <script>
-         // Change the type of input to password or text
              function ToggleLI() {
                  var temp = document.getElementById("hidePasswordLog");
                  if (temp.type === "password") {
