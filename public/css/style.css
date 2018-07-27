@@ -1,7 +1,7 @@
 
 body {
   background-color: #f7f7f7;
-  margin: -25px 0px 0px 0px;
+  margin: -32px 0px 0px 0px;
   padding: 0;
 }
 
@@ -13,7 +13,9 @@ font-family: 'Philosopher', sans-serif;
 /* HEADER */
 
 #header {
-  background-color: blue;
+  background-color: #F2F0E6;
+  line-height: 100px;
+  font-size: 24px;
   text-align: center;
   height: 100px;
   padding: 0px;
@@ -21,13 +23,38 @@ font-family: 'Philosopher', sans-serif;
   padding: 0px;
 }
 
+/*List of Events */
+
+#listOfEvents {
+  background-color: white;
+  border-radius: 2%;
+    border: 1px solid black;
+    height: 400px;
+    width: 600px;
+    margin-left: 50px;
+    margin: 0 auto;
+
+}
+
+#listTitle {
+  margin-top: 40px;
+}
+
+#eventLi {
+  padding: 50px;
+}
+
+ul {
+    list-style-type: none;
+    /* padding: 20px; */
+}
 
 /* ABOUT PAGE */
 
 #title {
   text-align: center;
   text-transform: capitalize;
-  background-color: #F2F0E6;
+  background-color: #D9D6DC;
   width: 1100px;
   height: 100px;
   margin: 0 auto;
@@ -62,12 +89,11 @@ font-family: 'Philosopher', sans-serif;
 }
 
 
-
 #aboutWrapper {
     text-align: center;
      width: 1000px;
      margin: 0 auto;
-     background-color: #F2F0E6;
+     background-color: #D9D6DC;
      /* border: 5px solid black; */
      position: relative;
      padding: 50px;
@@ -84,10 +110,61 @@ font-family: 'Philosopher', sans-serif;
     margin-left: 50px;
 }
 
-#about {
-  background-color: blue;
-  text-transform: capitalize;
+
+
+/* HOME */
+
+.hello {
+  text-align: center;
+  font-size: 32px;
+}
+
+#listWrapper {
+  width: 1000px;
+  height: 500px;
+  /* margin: 0 auto; */
+  background-color: #D9D6DC;
+  text-align: center;
   margin: 0 auto;
+  display: flex;
+
+}
+
+#listDiv {
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 2%;
+    border: 1px solid black;
+    height: 450px;
+    width: 600px;
+    align-items: center;
+    vertical-align: middle;
+    /* display: inline-block; */
+    position: relative;
+    margin-top: 25px;
+}
+
+
+.atx {
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+
+}
+
+
+
+#footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #F2F0E6;
+  text-align: center;
+  margin: 0 auto;
+  line-height: 35px;
+  position: fixed;
 }
 
 .headerTitle {

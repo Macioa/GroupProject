@@ -1,10 +1,17 @@
-<section class="partials">
+<section class="partials" class="clearfix">
+
+  <div id="listWrapper">
+    <div id="listDiv">
   <h2>List of Events</h2>
         <ul>
           <% for(let i = 0; i < events.length; i++){ %>
             <li>
-              <a href="/events/<%=events[i]._id%>"><%=events[i].name%></a>
+              <a href="/events/<%=events[i]._id%>" class="eventListings"><%=events[i].name%></a>
             </li>
           <% } %>
         </ul>
+
+      </div>
+
+
 <section>

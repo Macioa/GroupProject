@@ -9,8 +9,13 @@
 
     </head>
     <body>
+    <% include partials/header.ejs %>
     <% include partials/nav.ejs %>
-    <h2>Hello, <%=username%> </h2>
+
+    <img src="https://s3-media4.fl.yelpcdn.com/bphoto/Vh4TyXqhOF89pArewIzzGg/o.jpg" class="atx">
+    <img src="https://austinot.com/wp-content/uploads/2015/09/Barton-Springs-Featured-Image.jpg" class="atx">
+
+    <h2 class="hello">Hello, <%=username%> </h2>
     <% include partials/events/list.ejs %>
     <% include partials/footer.ejs %>
     </body>
