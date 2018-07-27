@@ -1,18 +1,18 @@
 <section class="partials">
-  
+
   <div class="lrDiv">
   <h3>Register</h3>
-    <form class="forms" action="/auth/register" method="POST">
+    <form class="lrForms" action="/auth/register" method="POST">
 
       <!-- replace username with email address -->
-      <input type="name" name="username" placeholder="username"> <br>
+      <input class="lrInput" type="name" name="username" placeholder="username"> <br>
 
-      <input id="hidePasswordReg" type="password" name="password" placeholder="password">
+      <input class="lrInput" id="hidePasswordReg" type="password" name="password" placeholder="password">
 
 
       <input type="checkbox" onclick="ToggleR()">
      Show Password<br>
-      <button id="submit" type="submit" onclick="alertToLogin()" >Register</button>
+      <button class="submit" type="submit" onclick="alertToLogin()" >Register</button>
 </div>
       <script>
             function ToggleR() {

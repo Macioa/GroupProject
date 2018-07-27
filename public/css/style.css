@@ -1,17 +1,17 @@
 
 body {
+  font-family: 'Cardo', serif;
   background-color: #f7f7f7;
   margin: -32px 0px 0px 0px;
   padding: 0;
 }
 
 h1 {
-font-family: 'Philosopher', sans-serif;
 text-align: center;
 }
 
 
-/* HEADER */
+/* =========================  HEADER  ========================== */
 
 #header {
   background-color: #F2F0E6;
@@ -24,33 +24,9 @@ text-align: center;
   padding: 0px;
 }
 
-/*List of Events */
 
-#listOfEvents {
-  background-color: white;
-  border-radius: 2%;
-    border: 1px solid black;
-    height: 400px;
-    width: 600px;
-    margin-left: 50px;
-    margin: 0 auto;
 
-}
-
-#listTitle {
-  margin-top: 40px;
-}
-
-#eventLi {
-  padding: 50px;
-}
-
-ul {
-    list-style-type: none;
-    /* padding: 20px; */
-}
-
-/* ABOUT PAGE */
+/* =========================  ABOUT PAGE  ========================== */
 
 #title {
   text-align: center;
@@ -63,13 +39,6 @@ ul {
   line-height: 100px;
 }
 
-.clearfix:after {
-   content: " "; /* Older browser do not support empty content */
-   visibility: hidden;
-   display: block;
-   height: 0;
-   clear: both;
-}
 
 
 #contactComment, #contactEmail {
@@ -113,7 +82,7 @@ ul {
 
 
 
-/* HOME */
+/* =========================  HOME  ========================== */
 
 .hello {
   text-align: center;
@@ -169,7 +138,34 @@ ul {
   margin-right: 75px;
 }
 
-/* FOOTER */
+
+/*List of Events */
+
+#listOfEvents {
+  background-color: white;
+  border-radius: 2%;
+    border: 1px solid black;
+    height: 400px;
+    width: 600px;
+    margin-left: 50px;
+    margin: 0 auto;
+
+}
+
+#listTitle {
+  margin-top: 40px;
+}
+
+#eventLi {
+  padding: 50px;
+}
+
+ul {
+    list-style-type: none;
+    /* padding: 20px; */
+}
+
+/* =========================  FOOTER  ========================== */
 
 #footer {
   left: 0;
@@ -182,15 +178,12 @@ ul {
   position: fixed;
 }
 
-.headerTitle {
-  text-transform: capitalize;
-}
 
-/* LOGIN PAGE */
+/* =========================  LOGIN PAGE  ========================== */
 
 .loginBanner {
   margin-left: 5%;
-  width: 90%;
+  width: 25%;
   height: 150px;
 }
 
@@ -210,7 +203,6 @@ ul {
 }
 
 .lrDiv {
-   /* margin: 0 auto; */
    background-color: white;
    border-radius: 2%;
     border: 1px solid black;
@@ -219,10 +211,26 @@ ul {
     float: left;
 }
 
+.lrForms {
+  margin-left: 100px;
+}
+
+.lrInput {
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+.submit {
+  padding: 5px;
+  background-color: #F2F0E6;
+  border-radius: 15%;
+}
 
 h3 {
   text-align: center;
 }
+
+/* =========================  PROFILE PAGE  ========================== */
 
 #profileTitle {
   text-align: center;
@@ -245,4 +253,14 @@ h3 {
   margin-top: 50px;
   float: left;
   width: 40%;
+}
+
+
+
+.clearfix:after {
+   content: " "; /* Older browser do not support empty content */
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
 }
