@@ -7,15 +7,17 @@
     <link href="/css/style.css" rel="stylesheet">
   </head>
   <body>
-    <header>
+
+
 <% include ../partials/nav.ejs %>
-    </header>
 
+<h2><%=username%>'s Profile </h2>
 
-<h2>Hello, <%=username%> </h2>
 
 <div class="profilePage">
-<h2>Hosted Events</h2>
+
+<div class="eventsColumn">
+<h1>Hosted Events</h1>
 <ul>
   <% for (let i = 0; i < hostedEvents.length; i++){%>
        <li><a href="/events/<%=hostedEvents[i].id%>"><%=hostedEvents[i].name%></a></li>
@@ -23,17 +25,18 @@
 </ul>
 
 
-<h2>Attended Events</h2>
+<h1>Attended Events</h1>
 <% for (let i = 0; i < attendedEvents.length; i++){%>
   <li><a href="/events/<%=attendedEvents[i].id%>"><%=attendedEvents[i].name%></a></li>
 <%}%>
-  </body>
-</html>
+</div>
 
+<div class="infoColumn">
 
-
-<h4>My Profile</h4>
   <% include ../partials/auth/edit.ejs %>
 <a class="links" href="/events/new">Add New Event</a>
 
 </div>
+
+</body>
+</html>

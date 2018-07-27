@@ -223,3 +223,14 @@ ul {
 h3 {
   text-align: center;
 }
+
+
+.profilePage {
+  background-color: white;
+  border-radius: 2%;
+   border: 1px solid black;
+   height: 800px;
+   width: 90%;
+   float: left;
+  text-align: center;
+}
