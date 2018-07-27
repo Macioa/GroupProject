@@ -188,6 +188,12 @@ ul {
 
 /* LOGIN PAGE */
 
+.loginBanner {
+  margin-left: 5%;
+  width: 90%;
+  height: 150px;
+}
+
 #welcome {
   margin: 0 auto;
 }
@@ -212,6 +218,7 @@ ul {
     width: 400px;
     float: left;
 }
+
 
 h3 {
   text-align: center;
