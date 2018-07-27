@@ -92,12 +92,13 @@ text-align: center;
 #listWrapper {
   width: 90%;
   height: 500px;
-  /* margin: 0 auto; */
-  /* background-color: #F2F0E6; */
-  text-align: center;
   margin: 0 auto;
-  display: flex;
-
+  background-color: #F2F0E6;
+  text-align: center;
+  display: inline;
+  /* margin: 0 auto; */
+  /* display: flex; */
+  /* position: relative; */
 }
 
 #listDiv {
@@ -107,11 +108,12 @@ text-align: center;
     border: 1px solid black;
     height: 450px;
     width: 600px;
-    align-items: center;
-    vertical-align: middle;
+margin-bottom: 25px;
+  /* text-align: center; */
+    /* vertical-align: middle; */
     /* display: inline-block; */
-    position: relative;
-    margin-top: 25px;
+    /* position: relative; */
+    /* margin-top: 25px; */
 }
 
 .list {
@@ -141,7 +143,7 @@ text-align: center;
 
 /*List of Events */
 
-#listOfEvents {
+/* #listOfEvents {
   background-color: white;
   border-radius: 2%;
     border: 1px solid black;
@@ -149,8 +151,8 @@ text-align: center;
     width: 600px;
     margin-left: 50px;
     margin: 0 auto;
-
-}
+    position: relative;
+} */
 
 #listTitle {
   margin-top: 40px;
@@ -175,7 +177,8 @@ ul {
   text-align: center;
   margin: 0 auto;
   line-height: 35px;
-  position: fixed;
+  /* display: ; */
+  position: relative;
 }
 
 
@@ -200,6 +203,7 @@ ul {
   justify-content: space-evenly;
   margin: 0 auto;
   position: relative;
+  margin-bottom: 50px;
 }
 
 .lrDiv {
@@ -270,8 +274,6 @@ h3 {
 }
 
 .devito {
-  /* border-radius: 10%; */
-  /* display: block; */
   margin-bottom: 20px;
   border-radius: 50%;
 }
