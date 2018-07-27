@@ -10,7 +10,7 @@
 
       <input type="checkbox" onclick="ToggleR()">
      Show Password<br>
-      <button type="submit">Register</button>
+      <button id="submit" type="submit" onclick="alertToLogin()" >Register</button>
 
       <script>
             function ToggleR() {
@@ -22,10 +22,13 @@
                     temp.type = "password";
                 }
             }
+           function alertToLogin() {
+             alert('You are all set! Please Login');
+           }
     </script>
 
 
-    
+
 
     </form>
 </section>

@@ -3,27 +3,41 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link href="css/reset.css" rel="stylesheet"> -->
+
+
+    <link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
     <title>What's Happening?</title>
   </head>
   <body>
+
+
+<% include partials/header.ejs %>
+
   <% include partials/nav.ejs %>
-    <h1>We Are What's Happening</h1>
+    <h1 id="title">We Are What's Happening</h1>
 
-    <img class="cdj" src="">
 
-    <div class="contact">
+<div id="aboutWrapper" class="clearfix">
+    <div class="contact" id="aboutLeft">
       <h3>Stop By Our Office and Say Hello</h3>
 <p>
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3445.894437462964!2d-97.74551558540972!3d30.268588814905147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8644b509c0706f9d%3A0xb5c171e36a8626a6!2sWeWork+Congress!5e0!3m2!1sen!2sus!4v1532573171452" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3445.894437462964!2d-97.74551558540972!3d30.268588814905147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8644b509c0706f9d%3A0xb5c171e36a8626a6!2sWeWork+Congress!5e0!3m2!1sen!2sus!4v1532573171452" width="350" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
 </p>
+</div>
+
+<div class="contact" id="aboutRight">
 
   <h3>Or Leave Us a Message</h3>
-      <form class="forms" action="/" method="post">
-        <input type="email" placeholder="Email Address">
-        <textarea name="contactUs" placeholder="Leave Comments, Questions, or Suggestions Here"></textarea>
+      <form id="contactUs" action="/" method="post">
+        <textarea id="contactComment" name="contactUs" placeholder="Tell us what's up!"></textarea>
+        <input id="contactEmail" type="email" placeholder="Email Address">
         <input type="submit">
       </form>
     </div>
 
+  </div>
+
+<% include partials/footer.ejs %>
   </body>
 </html>

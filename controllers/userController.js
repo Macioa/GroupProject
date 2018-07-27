@@ -11,16 +11,16 @@ const User = require('../models/user')
 //GET THE USER'S PROFILE PAGE.
 router.get('/:id/profile', (req, res) => {
     User.findById(req.params.id, (err, foundUser) => {
-      console.log(chalk.green(`id match ${foundUser}`));
-        //it was show.ejs but that didn't match the ejs name
         res.render('users/profile.ejs', {
-            user: foundUser, //foundUser is what findById is referring to.
+            user: foundUser, 
             hostedEvents: foundUser.hostedEvents,
             attendedEvents: foundUser.attendedEvents,
-            username: req.session.username
+            username: req.session.username 
           })
         })
     })
+
+
 
   //GET THE USER'S EDIT PAGE.
 router.get('/:id/edit', (req, res) => {
@@ -55,5 +55,4 @@ router.put('/:id', (req, res) => {
 
 
 
-
-    module.exports = router;
+module.exports = router;
