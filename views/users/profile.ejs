@@ -11,10 +11,10 @@
 <% include ../partials/nav.ejs %>
     </header>
 
+
 <h2>Hello, <%=username%> </h2>
-<h4>My Profile</h4>
-  <% include ../partials/auth/edit.ejs %>
-<a class="links" href="/events/new">Add New Event</a>
+
+<div class="profilePage">
 <h2>Hosted Events</h2>
 <ul>
   <% for (let i = 0; i < hostedEvents.length; i++){%>
@@ -29,3 +29,11 @@
 <%}%>
   </body>
 </html>
+
+
+
+<h4>My Profile</h4>
+  <% include ../partials/auth/edit.ejs %>
+<a class="links" href="/events/new">Add New Event</a>
+
+</div>
