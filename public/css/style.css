@@ -7,6 +7,7 @@ body {
 
 h1 {
 font-family: 'Philosopher', sans-serif;
+text-align: center;
 }
 
 
@@ -186,26 +187,30 @@ ul {
 }
 
 /* LOGIN PAGE */
+
+#welcome {
+  margin: 0 auto;
+}
+
 #lrWrapper {
   background-color: #e5e5e5;
-  width: 80%;
+  width: 90%;
   height: 300px;
   display: flex;
-  /* justify-content: center;  */
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  position: relative;
 }
 
 .lrDiv {
-  margin: 0 auto;
-  background-color: white;
-  border-radius: 2%;
+   /* margin: 0 auto; */
+   background-color: white;
+   border-radius: 2%;
     border: 1px solid black;
     height: 200px;
-    width: 300px;
-    align-items: center;
-    vertical-align: middle;
-    display: inline-block;
-    position: relative;
-    margin-top: 25px;
+    width: 400px;
+    float: left;
 }
 
 h3 {
