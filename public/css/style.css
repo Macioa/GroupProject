@@ -224,13 +224,25 @@ h3 {
   text-align: center;
 }
 
+#profileTitle {
+  text-align: center;
+  font-size: 42px;
+}
 
 .profilePage {
+  margin: 0 auto;
   background-color: white;
   border-radius: 2%;
    border: 1px solid black;
-   height: 800px;
-   width: 90%;
-   float: left;
+   height: 500px;
+   width: 80%;
   text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.eventsColumn, .infoColumn {
+  margin-top: 50px;
+  float: left;
+  width: 40%;
 }

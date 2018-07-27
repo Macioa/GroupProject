@@ -11,13 +11,21 @@
 
 <% include ../partials/nav.ejs %>
 
-<h2><%=username%>'s Profile </h2>
+
+<h2 id="profileTitle"><%=username%>'s Profile </h2>
 
 
 <div class="profilePage">
 
+  <div class="infoColumn">
+<h2>My Info</h2>
+    <% include ../partials/auth/edit.ejs %>
+  <a class="links" href="/events/new">Add New Event</a>
+
+  </div>
+
 <div class="eventsColumn">
-<h1>Hosted Events</h1>
+<h2>Hosted Events</h2>
 <ul>
   <% for (let i = 0; i < hostedEvents.length; i++){%>
        <li><a href="/events/<%=hostedEvents[i].id%>"><%=hostedEvents[i].name%></a></li>
@@ -25,18 +33,13 @@
 </ul>
 
 
-<h1>Attended Events</h1>
+<h2>Attended Events</h2>
 <% for (let i = 0; i < attendedEvents.length; i++){%>
   <li><a href="/events/<%=attendedEvents[i].id%>"><%=attendedEvents[i].name%></a></li>
 <%}%>
 </div>
 
-<div class="infoColumn">
 
-  <% include ../partials/auth/edit.ejs %>
-<a class="links" href="/events/new">Add New Event</a>
-
-</div>
 
 </body>
 </html>
