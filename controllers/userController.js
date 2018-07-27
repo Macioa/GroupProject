@@ -11,16 +11,11 @@ const User = require('../models/user')
 //GET THE USER'S PROFILE PAGE.
 router.get('/:id/profile', (req, res) => {
     User.findById(req.params.id, (err, foundUser) => {
-      console.log(chalk.green(`id match ${foundUser}`));
-        //it was show.ejs but that didn't match the ejs name
         res.render('users/profile.ejs', {
-            user: foundUser, //foundUser is what findById is referring to.
+            user: foundUser, 
             hostedEvents: foundUser.hostedEvents,
             attendedEvents: foundUser.attendedEvents,
-            username: req.session.username //Cannot read property 'hostedEvents' of undefined. needs to find hostedEvents to a user. The overall problem is it's not finding the user in foundUser
-            //
-            // attendedEvents: foundUser.attendedEvents,
-            // username: req.session.username
+            username: req.session.username 
           })
         })
     })
