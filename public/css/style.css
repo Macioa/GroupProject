@@ -120,10 +120,10 @@ ul {
 }
 
 #listWrapper {
-  width: 1000px;
+  width: 90%;
   height: 500px;
   /* margin: 0 auto; */
-  background-color: #D9D6DC;
+  /* background-color: #F2F0E6; */
   text-align: center;
   margin: 0 auto;
   display: flex;
@@ -142,6 +142,11 @@ ul {
     /* display: inline-block; */
     position: relative;
     margin-top: 25px;
+}
+
+.list {
+  font-size: 28px;
+  padding: 30px;
 }
 
 .homeImages {

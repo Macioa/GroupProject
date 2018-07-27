@@ -1,26 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title></title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="css/style.css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
 
-    </head>
-    <body>
-    <% include partials/header.ejs %>
+<head>
+  <title></title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
+
+</head>
+
+<body>
+  <% include partials/header.ejs %>
     <% include partials/nav.ejs %>
 
-    <div class="homeImages">
-    <img src="http://res.cloudinary.com/culturemap-com/image/upload/q_auto/ar_4:3,c_fill,g_faces:center,w_1200/v1473280540/photos/175603_original.jpg" class="atx">
+      <div class="homeImages">
+        <img src="http://res.cloudinary.com/culturemap-com/image/upload/q_auto/ar_4:3,c_fill,g_faces:center,w_1200/v1473280540/photos/175603_original.jpg" class="atx">
 
-    <img src="https://s3-media4.fl.yelpcdn.com/bphoto/Vh4TyXqhOF89pArewIzzGg/o.jpg" class="atx" id="centerImg">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/360_Barton_Springs_5July08_%289%29.JPG/1200px-360_Barton_Springs_5July08_%289%29.JPG" class="atx">
-</div>
+        <img src="https://s3-media4.fl.yelpcdn.com/bphoto/Vh4TyXqhOF89pArewIzzGg/o.jpg" class="atx" id="centerImg">
+        
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/360_Barton_Springs_5July08_%289%29.JPG/1200px-360_Barton_Springs_5July08_%289%29.JPG" class="atx">
+      </div>
 
-    <h2 class="hello">Hello, <%=username%> </h2>
-    <% include partials/events/list.ejs %>
-    <% include partials/footer.ejs %>
-    </body>
+      <h2 class="hello">Hello, <%=username%> </h2>
+      <% include partials/events/list.ejs %>
+        <% include partials/footer.ejs %>
+</body>
+
 </html>

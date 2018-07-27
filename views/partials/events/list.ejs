@@ -6,6 +6,7 @@
         <ul>
           <% for(let i = 0; i < events.length; i++){ %>
             <li>
+              <span class = "list">
               <a href="/events/<%=events[i]._id%>" class="eventListings"><%=events[i].name%></a>
             </li>
           <% } %>
